@@ -26,20 +26,35 @@ h1 {
 h2 {
     font-size: 1.5rem;
 }
-
+.btn-box {
+    width: 25%;
+    margin: 20px auto;
+}
 .btn {
-    padding: .25rem .5rem;
+    padding: .75rem .5rem;
     background-color: var(--color1);
     border-radius: 15px;
     color: var(--color2);
-    margin: 20px auto;
-    width: 25%;
-    flex-shrink: 0;
     text-align: center;
 }
 
-.btn p {
+.btn span {
     position: relative;
     color: var(--color2);
     margin: .3rem;
+}
+
+.btn span::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color3);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: 0.2s;
+}
+
+.btn span:hover::after {
+    width: 100%;
 }
