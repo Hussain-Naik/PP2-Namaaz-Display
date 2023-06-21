@@ -27,3 +27,19 @@ h2 {
     font-size: 1.5rem;
 }
 
+.btn {
+    padding: .25rem .5rem;
+    background-color: var(--color1);
+    border-radius: 15px;
+    color: var(--color2);
+    margin: 20px auto;
+    width: 25%;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.btn p {
+    position: relative;
+    color: var(--color2);
+    margin: .3rem;
+}
