@@ -28,6 +28,7 @@ h2 {
 }
 .btn-box {
     width: 25%;
+    min-width: 200px;
     margin: 20px auto;
 }
 .btn {
