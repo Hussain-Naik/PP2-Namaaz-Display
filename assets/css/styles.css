@@ -58,3 +58,7 @@ h2 {
 .btn span:hover::after {
     width: 100%;
 }
+
+.center {
+    text-align: center;
+}
