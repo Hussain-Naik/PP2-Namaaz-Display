@@ -31,8 +31,20 @@ function loadForm() {
 function loadResults() {
 
 }
-
+/**
+ * Load the previous page display depending on user current display
+ * App like navigation
+ */
 function previousPage() {
+    let html = document.getElementById('display');
+    let x = pageInc(html , '-');
+    if (x == 0) {
+        indexPage();
+    } else if (x == 1){
+        loadForm();
+    }
+
+    html.setAttribute('data-type', x);
 
 }
 /**
