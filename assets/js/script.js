@@ -15,13 +15,23 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	indexPage();
 });
-
+/**
+ * Load increment display data-type by 1 and call loadForm
+ */
 function clickByCity() {
-
+    let html = document.getElementById('display');
+    let x = pageInc(html , '+');
+    loadForm();
+    html.setAttribute('data-type', x);
 }
-
+/**
+ * Load increment display data-type by 1 and call loadResult
+ */
 function clickByLocation() {
-    
+    let html = document.getElementById('display');
+    let x = pageInc(html , '+');
+    loadResults();
+    html.setAttribute('data-type', x);
 }
 
 function loadForm() {
