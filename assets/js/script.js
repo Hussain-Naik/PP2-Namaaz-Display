@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	indexPage();
 });
+
 function clickByCity() {
 
 }
@@ -49,4 +50,5 @@ function indexPage() {
     </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
+    html.setAttribute('data-type', '0')
 }
