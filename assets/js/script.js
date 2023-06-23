@@ -93,3 +93,7 @@ function pageInc(page, inc) {
     }
     return x;
 }
+
+function clickBy(button) {
+    console.log(button);
+}
