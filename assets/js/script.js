@@ -35,7 +35,10 @@ function loadResults() {
 function previousPage() {
 
 }
-
+/**
+ * Load the index main html code
+ * Set page increment data-type to 0
+ */
 function indexPage() {
     let insert = `<h2 class="center">Display Prayer Times</h2>
     <div class="btn-box" data-type="by">
