@@ -34,6 +34,7 @@ function loadResults() {
 /**
  * Load the previous page display depending on user current display
  * App like navigation
+ * decrement data-type and set value
  */
 function previousPage() {
     let html = document.getElementById('display');
