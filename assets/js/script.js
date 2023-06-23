@@ -64,12 +64,12 @@ function previousPage() {
  */
 function indexPage() {
     let insert = `<h2 class="center">Display Prayer Times</h2>
-    <div class="btn-box" data-type="by">
+    <div class="btn-box" data-type="city">
         <div class="btn button">
             <span>By City</span>
         </div>
     </div>
-    <div class="btn-box">
+    <div class="btn-box" data-type="location">
         <div class="btn button">
             <span>By Location</span>
         </div>
