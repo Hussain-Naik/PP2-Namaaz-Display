@@ -55,3 +55,18 @@ function indexPage() {
     html.innerHTML = insert;
     html.setAttribute('data-type', '0')
 }
+/**
+ * Function to increment or decrement the data-type
+ * pass argument page as the display element id
+ * pass argument +/- for increment/decrement
+ * returns value to set data-type
+ */
+function pageInc(page, inc) {
+    let x = page.getAttribute('data-type')
+    if (inc === '+'){
+        x++;
+    } else {
+        x--;
+    }
+    return x;
+}
