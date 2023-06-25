@@ -93,7 +93,11 @@ function pageInc(page, inc) {
     }
     return x;
 }
-
+/**
+ * Function to run click event code depending on data-type
+ * pass argument button element clicked
+ * check and run city or location function
+ */
 function clickBy(button) {
     if (button.getAttribute("data-type") === "city") {
         clickByCity();
