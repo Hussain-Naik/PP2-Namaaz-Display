@@ -1,3 +1,51 @@
+const div_section = document.querySelector('#display');
+
+const observer = new MutationObserver((mutationsList, observer) => {
+    for(const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+            let buttons = document.getElementsByClassName("button");
+            console.log(buttons);
+
+            let page = 'index'
+    
+	        for (let button of buttons) {
+		        button.addEventListener("click", function() {
+			    if (this.getAttribute("data-type") === "city") {
+				    page = 'city';
+                    console.log(page);
+                    loadPage(page);
+                } 
+                else if (this.getAttribute("data-type") === "location"){
+                    page = 'location';
+                    console.log(page);
+                    loadPage(page);
+                }
+                else if (this.getAttribute("data-type") === "home"){
+                    page = 'index';
+                    console.log(page);
+                    loadPage(page);
+                } 
+                else {
+                    page = 'index'
+                    loadPage(page);
+                }
+            });
+	}
+            const nodes = mutation.addedNodes;
+            nodes.forEach(node => {
+                node.addEventListener('click', debugClick);
+            });
+        }
+    }
+});
+
+observer.observe(div_section, { 
+    attributes: true, 
+    childList: true, 
+    subtree: true }
+);
+
 // Wait for the DOM to finish loading before loading page
 // Get the button elements and add event listeners to them
 
@@ -29,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
     console.log(buttons);
-    loadPage(page);
 });
 /**
  * Load increment display data-type by 1 and call loadForm
@@ -138,4 +185,8 @@ function loadPage(page) {
         indexPage();
     }
     console.log(page);
+}
+
+function debugClick() {
+    console.log('click');
 }
