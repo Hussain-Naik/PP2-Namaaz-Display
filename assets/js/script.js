@@ -93,11 +93,7 @@ function loadForm() {
 }
 
 function loadResults() {
-    let insert = `<div class="btn-box">
-    <div class="btn button" data-type="back">
-        <span>Back</span>
-    </div>
-</div>
+    let insert = `
 <div class="prayer">
     <div class="prayers">
         <div class="timer">
@@ -106,6 +102,10 @@ function loadResults() {
         <h3 class="prayer-name">Fajr</h3>
         <h3 class="prayer-time">05:00</h3>
     </div>  
+</div><div class="btn-box">
+<div class="btn button" data-type="back">
+    <span>Back</span>
+</div>
 </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
