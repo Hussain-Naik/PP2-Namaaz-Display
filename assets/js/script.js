@@ -71,7 +71,14 @@ function clickByLocation() {
     html.setAttribute('data-type', x);
     fetch('https://api.aladhan.com/v1/calendar/2023/6?latitude=51.508515&longitude=-0.1254872&method=2')
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+        console.log(data.data[0].timings);
+        console.log(data.data[0].timings.Fajr);
+        let element = document.getElementsByClassName('prayer-time');
+        console.log(element);
+
+    });
+
 }
 
 function loadForm() {
