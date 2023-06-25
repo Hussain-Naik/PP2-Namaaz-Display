@@ -31,11 +31,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
                     loadPage(page);
                 }
             });
-	}
-            const nodes = mutation.addedNodes;
-            nodes.forEach(node => {
-                node.addEventListener('click', debugClick);
-            });
+	        }
         }
     }
 });
@@ -185,8 +181,4 @@ function loadPage(page) {
         indexPage();
     }
     console.log(page);
-}
-
-function debugClick() {
-    console.log('click');
 }
