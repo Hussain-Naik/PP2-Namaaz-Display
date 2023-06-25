@@ -21,10 +21,10 @@ const observer = new MutationObserver((mutationsList, observer) => {
                     console.log(page);
                     loadPage(page);
                 }
-                else if (this.getAttribute("data-type") === "home"){
-                    page = 'index';
+                else if (this.getAttribute("data-type") === "back"){
+                    page = 'back';
                     console.log(page);
-                    loadPage(page);
+                    previousPage();
                 } 
                 else {
                     page = 'index'
