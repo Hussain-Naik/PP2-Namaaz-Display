@@ -1,3 +1,5 @@
+//Use MutationObserve to update added html buttons
+//https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/
 const div_section = document.querySelector('#display');
 
 const observer = new MutationObserver((mutationsList, observer) => {
@@ -68,7 +70,26 @@ function clickByLocation() {
 }
 
 function loadForm() {
+    let insert = `
+<div class="prayer">
+    <div class="prayers">
+        <div class="timer">
 
+        </div>
+        <h3 class="prayer-name">form</h3>
+        <h3 class="prayer-time">05:00</h3>
+    </div>  
+</div><div class="btn-box" data-type="back">
+<div class="btn button">
+    <span>Back</span>
+</div>
+</div><div class="btn-box" data-type="submit">
+<div class="btn button">
+    <span>Submit</span>
+</div>
+</div>`;
+    let html = document.getElementById('display');
+    html.innerHTML = insert;
 }
 
 function loadResults() {
