@@ -74,7 +74,22 @@ function clickByLocation() {
     .then(data => {
         console.log(data.data[0].timings);
         console.log(data.data[0].timings.Fajr);
+        //timing output
+        
+        //data.data[0] will need code to get current date
+
+        //get document element for prayer times
         let element = document.getElementsByClassName('prayer-time');
+        //set fajr
+        element[0].innerHTML = data.data[0].timings.Fajr;
+        //set zohar
+        element[1].innerHTML = data.data[0].timings.Dhuhr;
+        //set asar
+        element[2].innerHTML = data.data[0].timings.Asr;
+        //set maghrib
+        element[3].innerHTML = data.data[0].timings.Maghrib;
+        //set isha
+        element[4].innerHTML = data.data[0].timings.Isha;
         console.log(element);
 
     });
