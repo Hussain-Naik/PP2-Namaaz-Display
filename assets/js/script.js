@@ -69,6 +69,9 @@ function clickByLocation() {
     let x = pageInc(html , '+');
     loadResults();
     html.setAttribute('data-type', x);
+    fetch('https://api.aladhan.com/v1/calendar/2023/6?latitude=51.508515&longitude=-0.1254872&method=2')
+    .then(response => response.json())
+    .then(data => console.log(data));
 }
 
 function loadForm() {
