@@ -1,5 +1,6 @@
 //Use MutationObserve to update added html buttons
 //https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/
+
 const div_section = document.querySelector('#display');
 
 const observer = new MutationObserver((mutationsList, observer) => {
@@ -63,6 +64,7 @@ function clickByCity() {
  * Load increment display data-type by 1 and call loadResult
  */
 function clickByLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
     let html = document.getElementById('display');
     let x = pageInc(html , '+');
     loadResults();
@@ -193,4 +195,17 @@ function loadPage(page) {
         indexPage();
     }
     console.log(page);
+}
+
+/**
+ * Function to return latitude
+ * @param {*} position 
+ * @returns x
+ */
+function showPosition(position) {
+    let x = [];
+    x.push(position.coords.latitude);
+    x.push(position.coords.longitude);
+    console.log(x);
+    return x
 }
