@@ -46,33 +46,7 @@ observer.observe(div_section, {
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-	let buttons = document.getElementsByClassName("button");
-    let page = 'index'
-    
-	for (let button of buttons) {
-		button.addEventListener("click", function() {
-			if (this.getAttribute("data-type") === "city") {
-				page = 'city';
-                console.log(page);
-                loadPage(page);
-			} 
-            else if (this.getAttribute("data-type") === "location"){
-                page = 'location';
-                console.log(page);
-                loadPage(page);
-            }
-            else if (this.getAttribute("data-type") === "home"){
-                page = 'index';
-                console.log(page);
-                loadPage(page);
-            } 
-            else {
-				page = 'index'
-                loadPage(page);
-			}
-		});
-	}
-    console.log(buttons);
+	loadPage('index');
 });
 /**
  * Load increment display data-type by 1 and call loadForm
