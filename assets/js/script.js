@@ -39,7 +39,24 @@ function loadForm() {
 }
 
 function loadResults() {
+    let insert = `<div class="prayer">
+    <div class="btn-box" data-type="back">
+        <div class="btn button">
+            <span>Back</span>
+        </div>
+    </div>
+    <div class="timer">
 
+    </div>
+    <div class="prayer-name">
+        <h3>Fajr</h3>
+    </div>
+    <div class="prayer-time">
+        <h3>05:00</h3>
+    </div>
+</div>`;
+    let html = document.getElementById('display');
+    html.innerHTML = insert;
 }
 /**
  * Load the previous page display depending on user current display
