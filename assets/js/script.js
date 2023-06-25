@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (this.getAttribute("data-type") === "home") {
 				indexPage();
 			} else {
-				
+				clickBy(button);
 			}
 		});
 	}
