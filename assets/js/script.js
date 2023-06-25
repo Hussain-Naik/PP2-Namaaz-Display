@@ -3,17 +3,20 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 	let buttons = document.getElementsByClassName("button");
-
+    let page = 'index'
+    console.log(buttons);
 	for (let button of buttons) {
 		button.addEventListener("click", function() {
-			if (this.getAttribute("data-type") === "home") {
-				indexPage();
-			} else {
-				clickBy(button);
+			if (this.getAttribute("data-type") === "city") {
+				page = 'city';
+			} else if (this.getAttribute("data-type") === "location"){
+                page = 'location';
+            } else {
+				page = 'index'
 			}
 		});
 	}
-	indexPage();
+    loadPage(page);
 });
 /**
  * Load increment display data-type by 1 and call loadForm
@@ -39,21 +42,19 @@ function loadForm() {
 }
 
 function loadResults() {
-    let insert = `<div class="prayer">
-    <div class="btn-box" data-type="back">
-        <div class="btn button">
-            <span>Back</span>
-        </div>
+    let insert = `<div class="btn-box" data-type="back">
+    <div class="btn button">
+        <span>Back</span>
     </div>
-    <div class="timer">
+</div>
+<div class="prayer">
+    <div class="prayers">
+        <div class="timer">
 
-    </div>
-    <div class="prayer-name">
-        <h3>Fajr</h3>
-    </div>
-    <div class="prayer-time">
-        <h3>05:00</h3>
-    </div>
+        </div>
+        <h3 class="prayer-name">Fajr</h3>
+        <h3 class="prayer-time">05:00</h3>
+    </div>  
 </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
@@ -115,12 +116,13 @@ function pageInc(page, inc) {
  * pass argument button element clicked
  * check and run city or location function
  */
-function clickBy(button) {
-    if (button.getAttribute("data-type") === "city") {
+function loadPage(page) {
+    if (page === "city") {
         clickByCity();
-    } else if (button.getAttribute("data-type") === "location") {
+    } else if (page === "location") {
         clickByLocation();
     } else {
-        console.log(button);
+        indexPage();
     }
+    console.log(page);
 }
