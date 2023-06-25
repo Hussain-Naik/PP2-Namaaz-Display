@@ -4,18 +4,31 @@
 document.addEventListener("DOMContentLoaded", function() {
 	let buttons = document.getElementsByClassName("button");
     let page = 'index'
-    console.log(buttons);
+    
 	for (let button of buttons) {
 		button.addEventListener("click", function() {
 			if (this.getAttribute("data-type") === "city") {
 				page = 'city';
-			} else if (this.getAttribute("data-type") === "location"){
+                console.log(page);
+                loadPage(page);
+			} 
+            else if (this.getAttribute("data-type") === "location"){
                 page = 'location';
-            } else {
+                console.log(page);
+                loadPage(page);
+            }
+            else if (this.getAttribute("data-type") === "home"){
+                page = 'index';
+                console.log(page);
+                loadPage(page);
+            } 
+            else {
 				page = 'index'
+                loadPage(page);
 			}
 		});
 	}
+    console.log(buttons);
     loadPage(page);
 });
 /**
@@ -82,13 +95,13 @@ function previousPage() {
  */
 function indexPage() {
     let insert = `<h2 class="center">Display Prayer Times</h2>
-    <div class="btn-box" data-type="city">
-        <div class="btn button">
+    <div class="btn-box">
+        <div class="btn button" data-type="city">
             <span>By City</span>
         </div>
     </div>
-    <div class="btn-box" data-type="location">
-        <div class="btn button">
+    <div class="btn-box">
+        <div class="btn button" data-type="location">
             <span>By Location</span>
         </div>
     </div>`;
