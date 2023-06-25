@@ -95,5 +95,11 @@ function pageInc(page, inc) {
 }
 
 function clickBy(button) {
-    console.log(button);
+    if (button.getAttribute("data-type") === "city") {
+        clickByCity();
+    } else if (button.getAttribute("data-type") === "location") {
+        clickByLocation();
+    } else {
+        console.log(button);
+    }
 }
