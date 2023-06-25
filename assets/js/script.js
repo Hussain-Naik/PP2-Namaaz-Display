@@ -79,12 +79,12 @@ function loadForm() {
         <h3 class="prayer-name">form</h3>
         <h3 class="prayer-time">05:00</h3>
     </div>  
-</div><div class="btn-box" data-type="back">
-<div class="btn button">
+</div><div class="btn-box">
+<div class="btn button" data-type="back">
     <span>Back</span>
 </div>
-</div><div class="btn-box" data-type="submit">
-<div class="btn button">
+</div><div class="btn-box">
+<div class="btn button" data-type="location">
     <span>Submit</span>
 </div>
 </div>`;
@@ -93,8 +93,8 @@ function loadForm() {
 }
 
 function loadResults() {
-    let insert = `<div class="btn-box" data-type="back">
-    <div class="btn button">
+    let insert = `<div class="btn-box">
+    <div class="btn button" data-type="back">
         <span>Back</span>
     </div>
 </div>
