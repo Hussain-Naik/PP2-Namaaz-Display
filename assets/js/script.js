@@ -62,19 +62,6 @@ function clickByCity() {
 }
 
 /**
- * Function to return latitude
- * @param {*} position 
- * @returns x
- */
-function showPosition(position) {
-    let x = '';
-    //x.push(position.coords.latitude);
-    //x.push(position.coords.longitude);
-    x = 'latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude;
-    console.log(x);
-    return x
-}
-/**
  * Load increment display data-type by 1 and call loadResult
  */
 function clickByLocation() {
