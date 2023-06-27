@@ -67,9 +67,10 @@ function clickByCity() {
  * @returns x
  */
 function showPosition(position) {
-    let x = [];
-    x.push(position.coords.latitude);
-    x.push(position.coords.longitude);
+    let x = '';
+    //x.push(position.coords.latitude);
+    //x.push(position.coords.longitude);
+    x = 'latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude;
     console.log(x);
     return x
 }
@@ -77,13 +78,14 @@ function showPosition(position) {
  * Load increment display data-type by 1 and call loadResult
  */
 async function clickByLocation() {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    let co = navigator.geolocation.getCurrentPosition(showPosition, console.log);
+    console.log(co);
     let html = document.getElementById('display');
     let x = pageInc(html , '+');
     loadResults();
     html.setAttribute('data-type', x);
     try {
-        let res = await fetch('https://api.aladhan.com/v1/calendar/2023/6?latitude=51.508515&longitude=-0.1254872&method=2');
+        let res = await fetch(`https://api.aladhan.com/v1/calendar/2023/6?${co}&method=2`);
         let data = await res.json();
         console.log(data);
         console.log(data.data[0].timings);
