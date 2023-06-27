@@ -77,38 +77,46 @@ function showPosition(position) {
 /**
  * Load increment display data-type by 1 and call loadResult
  */
-async function clickByLocation() {
-    let co = navigator.geolocation.getCurrentPosition(showPosition, console.log);
-    console.log(co);
+function clickByLocation() {
     let html = document.getElementById('display');
     let x = pageInc(html , '+');
     loadResults();
     html.setAttribute('data-type', x);
-    try {
-        let res = await fetch(`https://api.aladhan.com/v1/calendar/2023/6?${co}&method=2`);
-        let data = await res.json();
-        console.log(data);
-        console.log(data.data[0].timings);
-        console.log(data.data[0].timings.Fajr);
-        //timing output
-            
-        //data.data[0] will need code to get current date
-
-        //get document element for prayer times        
-        let element = document.getElementsByClassName('prayer-time');
-        element[0].innerHTML = data.data[0].timings.Fajr;
-        //set zohar
-        element[1].innerHTML = data.data[0].timings.Dhuhr;
-        //set asar
-        element[2].innerHTML = data.data[0].timings.Asr;
-        //set maghrib
-        element[3].innerHTML = data.data[0].timings.Maghrib;
-        //set isha
-        element[4].innerHTML = data.data[0].timings.Isha;
-        console.log(element);
-    } catch (error) {
-        console.log(error);
+    const success = async (position) => {
+        console.log('latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude);
+        try {
+            let res = await fetch(`https://api.aladhan.com/v1/calendar/2023/6?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=2`);
+            let data = await res.json();
+            console.log(data);
+            console.log(data.data[0].timings);
+            console.log(data.data[0].timings.Fajr);
+            //timing output
+                
+            //data.data[0] will need code to get current date
+    
+            //get document element for prayer times        
+            let element = document.getElementsByClassName('prayer-time');
+            element[0].innerHTML = data.data[0].timings.Fajr;
+            //set zohar
+            element[1].innerHTML = data.data[0].timings.Dhuhr;
+            //set asar
+            element[2].innerHTML = data.data[0].timings.Asr;
+            //set maghrib
+            element[3].innerHTML = data.data[0].timings.Maghrib;
+            //set isha
+            element[4].innerHTML = data.data[0].timings.Isha;
+            console.log(element);
+        } catch (error) {
+            console.log(error);
+        }
     }
+
+    const error = () => {
+        console.log('error');
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
+    
+    
     
 }
 
