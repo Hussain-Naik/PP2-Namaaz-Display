@@ -82,29 +82,36 @@ function clickByLocation() {
     let x = pageInc(html , '+');
     loadResults();
     html.setAttribute('data-type', x);
+    
+    
     const success = async (position) => {
         console.log('latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude);
         try {
-            let res = await fetch(`https://api.aladhan.com/v1/calendar/2023/6?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=2`);
+            //get current date
+            let currentDate = new Date();
+            const day = currentDate.getDate();
+            let month = currentDate.getMonth() + 1;
+            let year = currentDate.getFullYear();
+            console.log(day+ '/'+month+"/"+year)
+
+            let res = await fetch(`https://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=2`);
             let data = await res.json();
             console.log(data);
             console.log(data.data[0].timings);
             console.log(data.data[0].timings.Fajr);
             //timing output
-                
-            //data.data[0] will need code to get current date
     
             //get document element for prayer times        
             let element = document.getElementsByClassName('prayer-time');
-            element[0].innerHTML = data.data[0].timings.Fajr;
+            element[0].innerHTML = data.data[day].timings.Fajr;
             //set zohar
-            element[1].innerHTML = data.data[0].timings.Dhuhr;
+            element[1].innerHTML = data.data[day].timings.Dhuhr;
             //set asar
-            element[2].innerHTML = data.data[0].timings.Asr;
+            element[2].innerHTML = data.data[day].timings.Asr;
             //set maghrib
-            element[3].innerHTML = data.data[0].timings.Maghrib;
+            element[3].innerHTML = data.data[day].timings.Maghrib;
             //set isha
-            element[4].innerHTML = data.data[0].timings.Isha;
+            element[4].innerHTML = data.data[day].timings.Isha;
             console.log(element);
         } catch (error) {
             console.log(error);
