@@ -62,6 +62,25 @@ function clickByCity() {
 }
 
 /**
+ * populate the name time data from given data and day
+ * @param {*} data taken from the api fetch after json function
+ * @param {*} day array index
+ */
+function populateData(data, day) {
+    let element = document.getElementsByClassName('prayer-time');
+    //set fajr
+    element[0].innerHTML = data.data[day].timings.Fajr;
+    //set zohar
+    element[1].innerHTML = data.data[day].timings.Dhuhr;
+    //set asar
+    element[2].innerHTML = data.data[day].timings.Asr;
+    //set maghrib
+    element[3].innerHTML = data.data[day].timings.Maghrib;
+    //set isha
+    element[4].innerHTML = data.data[day].timings.Isha;
+}
+
+/**
  * Load increment display data-type by 1 and call loadResult
  */
 function clickByLocation() {
@@ -88,17 +107,8 @@ function clickByLocation() {
             console.log(data.data[0].timings.Fajr);
             //timing output
     
-            //get document element for prayer times        
-            let element = document.getElementsByClassName('prayer-time');
-            element[0].innerHTML = data.data[day].timings.Fajr;
-            //set zohar
-            element[1].innerHTML = data.data[day].timings.Dhuhr;
-            //set asar
-            element[2].innerHTML = data.data[day].timings.Asr;
-            //set maghrib
-            element[3].innerHTML = data.data[day].timings.Maghrib;
-            //set isha
-            element[4].innerHTML = data.data[day].timings.Isha;
+            populateData(data, day);       
+            
             console.log(element);
         } catch (error) {
             console.log(error);
