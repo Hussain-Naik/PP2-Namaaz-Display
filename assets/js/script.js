@@ -64,7 +64,7 @@ function clickByCity() {
 /**
  * populate the name time data from given data and day
  * @param {*} data taken from the api fetch after json function
- * @param {*} day array index
+ * @param {*} day array index value
  */
 function populateData(data, day) {
     let element = document.getElementsByClassName('prayer-time');
