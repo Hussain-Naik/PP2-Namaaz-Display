@@ -60,27 +60,40 @@ function clickByCity() {
     loadForm();
     html.setAttribute('data-type', x);
 }
+
+/**
+ * Function to return latitude
+ * @param {*} position 
+ * @returns x
+ */
+function showPosition(position) {
+    let x = [];
+    x.push(position.coords.latitude);
+    x.push(position.coords.longitude);
+    console.log(x);
+    return x
+}
 /**
  * Load increment display data-type by 1 and call loadResult
  */
-function clickByLocation() {
+async function clickByLocation() {
     navigator.geolocation.getCurrentPosition(showPosition);
     let html = document.getElementById('display');
     let x = pageInc(html , '+');
     loadResults();
     html.setAttribute('data-type', x);
-    fetch('https://api.aladhan.com/v1/calendar/2023/6?latitude=51.508515&longitude=-0.1254872&method=2')
-    .then(response => response.json())
-    .then(data => {
+    try {
+        let res = await fetch('https://api.aladhan.com/v1/calendar/2023/6?latitude=51.508515&longitude=-0.1254872&method=2');
+        let data = await res.json();
+        console.log(data);
         console.log(data.data[0].timings);
         console.log(data.data[0].timings.Fajr);
         //timing output
-        
+            
         //data.data[0] will need code to get current date
 
-        //get document element for prayer times
+        //get document element for prayer times        
         let element = document.getElementsByClassName('prayer-time');
-        //set fajr
         element[0].innerHTML = data.data[0].timings.Fajr;
         //set zohar
         element[1].innerHTML = data.data[0].timings.Dhuhr;
@@ -91,9 +104,10 @@ function clickByLocation() {
         //set isha
         element[4].innerHTML = data.data[0].timings.Isha;
         console.log(element);
-
-    });
-
+    } catch (error) {
+        console.log(error);
+    }
+    
 }
 
 function loadForm() {
@@ -222,15 +236,3 @@ function loadPage(page) {
     console.log(page);
 }
 
-/**
- * Function to return latitude
- * @param {*} position 
- * @returns x
- */
-function showPosition(position) {
-    let x = [];
-    x.push(position.coords.latitude);
-    x.push(position.coords.longitude);
-    console.log(x);
-    return x
-}
