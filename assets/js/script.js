@@ -12,6 +12,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
 	        for (let button of buttons) {
 		        button.addEventListener("click", function() {
                     loadPage(this.getAttribute("data-type"));
+                    console.log(this.getAttribute("data-type"));
                 });
 	        }
         }
@@ -102,6 +103,20 @@ function clickByLocation() {
     
 }
 
+/**
+ * Submit clicked
+ * Fetch API data for selected city
+ * increment data-type by 1 and call loadResult
+ */
+function clickSubmit() {
+    let html = document.getElementById('display');
+    
+    loadResults();
+
+    let pageIncrement = pageInc(html , '+');
+    html.setAttribute('data-type', pageIncrement);
+}
+
 function loadForm() {
     let insert = `
     <h2>Country/City Selector</h2>
@@ -123,7 +138,7 @@ function loadForm() {
         </div>
     </div>
     <div class="btn-box">
-        <div class="btn button" data-type="location">
+        <div class="btn button" data-type="submit">
             <span>Submit</span>
         </div>
     </div>`;
@@ -233,7 +248,9 @@ function loadPage(page) {
         clickByCity();
     } else if (page === "location") {
         clickByLocation();
-    } else if (page === "back"){
+    } else if (page === "submit") {
+        clickSubmit();
+    }else if (page === "back"){
         previousPage();
     } else {
         indexPage();
