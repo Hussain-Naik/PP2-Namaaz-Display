@@ -126,7 +126,8 @@ function clickByLocation() {
 
 function loadForm() {
     let insert = `
-    <form action="response.html" method="GET" class="frm-contact">
+    <form action="response.html" method="GET" class="frm-display">
+        <label for="countries">Countries:</label>
         <input list="countries">
         <datalist id="countries">
             <option value="option1">
