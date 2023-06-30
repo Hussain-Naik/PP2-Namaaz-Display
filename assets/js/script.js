@@ -112,6 +112,8 @@ function clickSubmit() {
     let html = document.getElementById('display');
     
     loadResults();
+    // http://api.aladhan.com/v1/calendarByCity/2017/4?city=London&country=United Kingdom&method=2
+
 
     let pageIncrement = pageInc(html , '+');
     html.setAttribute('data-type', pageIncrement);
