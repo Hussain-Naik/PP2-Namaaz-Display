@@ -9,7 +9,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
             console.log('A child node has been added or removed.');
             let buttons = document.getElementsByClassName("button");
 
-            let page = 'index'
+            let page = 'index';
     
 	        for (let button of buttons) {
 		        button.addEventListener("click", function() {
@@ -29,7 +29,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
                     previousPage();
                 } 
                 else {
-                    page = 'index'
+                    page = 'index';
                     loadPage(page);
                 }
             });
@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function clickByCity() {
     let html = document.getElementById('display');
-    let x = pageInc(html , '+');
+    let pageIncrement = pageInc(html , '+');
     loadForm();
-    html.setAttribute('data-type', x);
+    html.setAttribute('data-type', pageIncrement);
 }
 
 /**
@@ -91,7 +91,7 @@ function populateData(data, date) {
  */
 function clickByLocation() {
     let html = document.getElementById('display');
-    let x = pageInc(html , '+');
+    let pageIncrement = pageInc(html , '+');
     loadResults();
     const success = async (position) => {
         console.log('latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude);
@@ -118,7 +118,7 @@ function clickByLocation() {
     }
     navigator.geolocation.getCurrentPosition(success, error);
 
-    html.setAttribute('data-type', x);
+    html.setAttribute('data-type', pageIncrement);
     
     
     
@@ -151,6 +151,8 @@ function loadForm() {
     </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
+
+    html.setAttribute('data-type', '1')
 }
 
 function loadResults() {
@@ -197,16 +199,14 @@ function loadResults() {
  */
 function previousPage() {
     let html = document.getElementById('display');
-    let x = 0;
-    x = pageInc(html , '-');
-    console.log(x);
-    if (x == 0) {
+    let pageIncrement = pageInc(html , '-');
+    if (pageIncrement <= 0) {
         indexPage();
-    } else if (x == 1){
+    } else if (pageIncrement == 1){
         loadForm();
     }
 
-    html.setAttribute('data-type', x);
+    //html.setAttribute('data-type', pageIncrement);
 
 }
 /**
@@ -236,13 +236,13 @@ function indexPage() {
  * returns value to set data-type
  */
 function pageInc(page, inc) {
-    let x = page.getAttribute('data-type')
+    let pageIncrement = page.getAttribute('data-type')
     if (inc === '+'){
-        x++;
+        pageIncrement++;
     } else {
-        x--;
+        pageIncrement--;
     }
-    return x;
+    return pageIncrement;
 }
 /**
  * Function to run click event code depending on data-type
