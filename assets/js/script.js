@@ -8,9 +8,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
             let buttons = document.getElementsByClassName("button");
-
-            let page = 'index';
-    
+            
 	        for (let button of buttons) {
 		        button.addEventListener("click", function() {
                     loadPage(this.getAttribute("data-type"));
@@ -23,7 +21,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
 observer.observe(div_section, { 
     attributes: true, 
     childList: true, 
-    subtree: true }
+    subtree: false }
 );
 
 // Wait for the DOM to finish loading before loading page
@@ -51,8 +49,6 @@ function populateData(data, date) {
     let element = document.getElementsByClassName('prayer-time');
     let title = document.getElementsByTagName('h3');
     let x = date - 1;
-    console.log(data);
-    console.log(title);
     //Set h2 for georgian and hijri date
     title[0].innerHTML = 'georgian date';
     title[1].innerHTML = 'hijri date';
@@ -73,7 +69,7 @@ function populateData(data, date) {
  */
 function clickByLocation() {
     let html = document.getElementById('display');
-    let pageIncrement = pageInc(html , '+');
+    
     loadResults();
     const success = async (position) => {
         console.log('latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude);
@@ -99,7 +95,7 @@ function clickByLocation() {
         console.log('error');
     }
     navigator.geolocation.getCurrentPosition(success, error);
-
+    let pageIncrement = pageInc(html , '+');
     html.setAttribute('data-type', pageIncrement);
     
     
@@ -224,6 +220,7 @@ function pageInc(page, inc) {
     } else {
         pageIncrement--;
     }
+    console.log(pageIncrement);
     return pageIncrement;
 }
 /**
