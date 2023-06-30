@@ -108,3 +108,25 @@ h2 {
 .button:hover {
     cursor: pointer;
 }
+
+.frm-display {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    max-width: 300px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.frm-display label {
+    width: 80%;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+
+}
+.frm-display input {
+    width: 80%;
+    font-family: Oxygen, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+}
