@@ -68,8 +68,13 @@ function clickByCity() {
  */
 function populateData(data, date) {
     let element = document.getElementsByClassName('prayer-time');
+    let title = document.getElementsByTagName('h2');
     let x = date - 1;
-    console.log(x)
+    console.log(data);
+    console.log(title);
+    //Set h2 for georgian and hijri date
+    title[0].innerHTML = 'georgian date';
+    title[1].innerHTML = 'hijri date';
     //set fajr
     element[0].innerHTML = data.data[x].timings.Fajr;
     //set zohar
@@ -107,8 +112,6 @@ function clickByLocation() {
             //timing output
     
             populateData(data, day);       
-            
-            console.log('element' + element);
         } catch (error) {
             console.log(error);
         }
@@ -155,6 +158,8 @@ function loadForm() {
 function loadResults() {
     let insert = `
     <div class="prayer">
+        <h2></h2>
+        <h2></h2>
         <div class="prayers">
             <div class="timer">
 
