@@ -82,7 +82,7 @@ function clickByLocation() {
             let year = currentDate.getFullYear();
             console.log(day+ '/'+month+"/"+year)
 
-            let res = await fetch(`https://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=2`);
+            let res = await fetch(`https://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data = await res.json();
             //timing output
     
@@ -112,7 +112,7 @@ function clickSubmit() {
     let html = document.getElementById('display');
     
     loadResults();
-    // http://api.aladhan.com/v1/calendarByCity/2017/4?city=London&country=United Kingdom&method=2
+    // http://api.aladhan.com/v1/calendarByCity/2017/4?city=London&country=United Kingdom&method=15
 
 
     let pageIncrement = pageInc(html , '+');
