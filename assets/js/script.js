@@ -126,6 +126,7 @@ function clickByLocation() {
 
 function loadForm() {
     let insert = `
+    <h2>Country/City Selector</h2>
     <form action="response.html" method="GET" class="frm-display">
         <label for="country">Country:</label>
         <input list="countries" id="country" name="country">
@@ -209,7 +210,7 @@ function previousPage() {
  * Set page increment data-type to 0
  */
 function indexPage() {
-    let insert = `<h2 class="center">Display Prayer Times</h2>
+    let insert = `<h2">Display Prayer Times</h2>
     <div class="btn-box">
         <div class="btn button" data-type="city">
             <span>By City</span>
