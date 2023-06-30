@@ -68,7 +68,7 @@ function clickByCity() {
  */
 function populateData(data, date) {
     let element = document.getElementsByClassName('prayer-time');
-    let title = document.getElementsByTagName('h2');
+    let title = document.getElementsByTagName('h3');
     let x = date - 1;
     console.log(data);
     console.log(title);
@@ -157,9 +157,9 @@ function loadForm() {
 
 function loadResults() {
     let insert = `
+    <h3></h3>
+    <h3></h3>
     <div class="prayer">
-        <h2></h2>
-        <h2></h2>
         <div class="prayers">
             <div class="timer">
 
