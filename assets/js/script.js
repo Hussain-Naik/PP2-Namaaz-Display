@@ -127,13 +127,13 @@ function clickByLocation() {
 function loadForm() {
     let insert = `
     <form action="response.html" method="GET" class="frm-display">
-        <label for="countries">Countries:</label>
-        <input list="countries">
+        <label for="country">Country:</label>
+        <input list="countries" id="country" name="country">
         <datalist id="countries">
             <option value="option1">
         </datalist>
-        <label for="cities">City:</label>
-        <input list="cities">
+        <label for="city">City:</label>
+        <input list="cities" id="city" name="city">
         <datalist id="cities">
             <option value="city1">
         </datalist>
