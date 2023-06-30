@@ -29,10 +29,18 @@ h2 {
     font-size: 1.5rem;
     text-align: center;
 }
+
+h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    padding: .2rem;
+}
+
 .btn-box {
     width: 25%;
     min-width: 200px;
-    margin: 20px auto;
+    margin: .75rem auto;
 }
 .btn {
     padding: .75rem .5rem;
