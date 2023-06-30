@@ -129,6 +129,7 @@ function loadForm() {
     <form action="response.html" method="GET" class="frm-contact">
         <input list="countries">
         <datalist id="countries">
+            <option value="option1">
         </datalist>
     </form>
     <div class="btn-box">
