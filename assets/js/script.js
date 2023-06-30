@@ -13,26 +13,8 @@ const observer = new MutationObserver((mutationsList, observer) => {
     
 	        for (let button of buttons) {
 		        button.addEventListener("click", function() {
-			    if (this.getAttribute("data-type") === "city") {
-				    page = 'city';
-                    console.log('button click ' + page);
-                    loadPage(page);
-                } 
-                else if (this.getAttribute("data-type") === "location"){
-                    page = 'location';
-                    console.log('button click ' + page);
-                    loadPage(page);
-                }
-                else if (this.getAttribute("data-type") === "back"){
-                    page = 'back';
-                    console.log('button click ' + page);
-                    previousPage();
-                } 
-                else {
-                    page = 'index';
-                    loadPage(page);
-                }
-            });
+                    loadPage(this.getAttribute("data-type"));
+                });
 	        }
         }
     }
@@ -254,6 +236,8 @@ function loadPage(page) {
         clickByCity();
     } else if (page === "location") {
         clickByLocation();
+    } else if (page === "back"){
+        previousPage();
     } else {
         indexPage();
     }
