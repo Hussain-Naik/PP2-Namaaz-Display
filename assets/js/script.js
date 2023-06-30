@@ -8,7 +8,6 @@ const observer = new MutationObserver((mutationsList, observer) => {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
             let buttons = document.getElementsByClassName("button");
-            console.log(buttons);
 
             let page = 'index'
     
@@ -16,17 +15,17 @@ const observer = new MutationObserver((mutationsList, observer) => {
 		        button.addEventListener("click", function() {
 			    if (this.getAttribute("data-type") === "city") {
 				    page = 'city';
-                    console.log(page);
+                    console.log('button click ' + page);
                     loadPage(page);
                 } 
                 else if (this.getAttribute("data-type") === "location"){
                     page = 'location';
-                    console.log(page);
+                    console.log('button click ' + page);
                     loadPage(page);
                 }
                 else if (this.getAttribute("data-type") === "back"){
                     page = 'back';
-                    console.log(page);
+                    console.log('button click ' + page);
                     previousPage();
                 } 
                 else {
@@ -94,9 +93,6 @@ function clickByLocation() {
     let html = document.getElementById('display');
     let x = pageInc(html , '+');
     loadResults();
-    html.setAttribute('data-type', x);
-    
-    
     const success = async (position) => {
         console.log('latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude);
         try {
@@ -121,6 +117,8 @@ function clickByLocation() {
         console.log('error');
     }
     navigator.geolocation.getCurrentPosition(success, error);
+
+    html.setAttribute('data-type', x);
     
     
     
@@ -199,7 +197,9 @@ function loadResults() {
  */
 function previousPage() {
     let html = document.getElementById('display');
-    let x = pageInc(html , '-');
+    let x = 0;
+    x = pageInc(html , '-');
+    console.log(x);
     if (x == 0) {
         indexPage();
     } else if (x == 1){
@@ -257,6 +257,5 @@ function loadPage(page) {
     } else {
         indexPage();
     }
-    console.log(page);
 }
 
