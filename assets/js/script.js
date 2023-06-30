@@ -64,20 +64,22 @@ function clickByCity() {
 /**
  * populate the name time data from given data and day
  * @param {*} data taken from the api fetch after json function
- * @param {*} day array index value
+ * @param {*} date Pass date 
  */
-function populateData(data, day) {
+function populateData(data, date) {
     let element = document.getElementsByClassName('prayer-time');
+    let x = date - 1;
+    console.log(x)
     //set fajr
-    element[0].innerHTML = data.data[day].timings.Fajr;
+    element[0].innerHTML = data.data[x].timings.Fajr;
     //set zohar
-    element[1].innerHTML = data.data[day].timings.Dhuhr;
+    element[1].innerHTML = data.data[x].timings.Dhuhr;
     //set asar
-    element[2].innerHTML = data.data[day].timings.Asr;
+    element[2].innerHTML = data.data[x].timings.Asr;
     //set maghrib
-    element[3].innerHTML = data.data[day].timings.Maghrib;
+    element[3].innerHTML = data.data[x].timings.Maghrib;
     //set isha
-    element[4].innerHTML = data.data[day].timings.Isha;
+    element[4].innerHTML = data.data[x].timings.Isha;
 }
 
 /**
@@ -102,14 +104,11 @@ function clickByLocation() {
 
             let res = await fetch(`https://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=2`);
             let data = await res.json();
-            console.log(data);
-            console.log(data.data[0].timings);
-            console.log(data.data[0].timings.Fajr);
             //timing output
     
             populateData(data, day);       
             
-            console.log(element);
+            console.log('element' + element);
         } catch (error) {
             console.log(error);
         }
