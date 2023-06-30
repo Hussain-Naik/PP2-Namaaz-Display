@@ -210,7 +210,7 @@ function previousPage() {
  * Set page increment data-type to 0
  */
 function indexPage() {
-    let insert = `<h2">Display Prayer Times</h2>
+    let insert = `<h2>Display Prayer Times</h2>
     <div class="btn-box">
         <div class="btn button" data-type="city">
             <span>By City</span>
