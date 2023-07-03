@@ -143,12 +143,10 @@ function loadForm() {
         <label for="country">Country:</label>
         <input list="countries" id="country" name="country">
         <datalist id="countries">
-            <option value="option1">
         </datalist>
         <label for="city">City:</label>
         <input list="cities" id="city" name="city">
         <datalist id="cities">
-            <option value="city1">
         </datalist>
     </form>
     <div class="btn-box">
