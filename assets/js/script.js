@@ -97,7 +97,7 @@ function clickByLocation() {
     
     loadResults();
     const success = async (position) => {
-        console.log('latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude);
+        let pos = 'latitude :' + position.coords.latitude + ' longitude :' + position.coords.longitude;
         try {
             //get current date
             let currentDate = new Date();
@@ -112,7 +112,7 @@ function clickByLocation() {
             console.log(data);
             //timing output
     
-            populateData(data, 'Current GPS Location');       
+            populateData(data, pos);       
         } catch (error) {
             console.log(error);
         }
