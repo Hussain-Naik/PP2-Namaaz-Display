@@ -1,7 +1,7 @@
 //Use MutationObserve to update added html buttons
 //https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/
 
-const div_section = document.querySelector('#display');
+const divSection = document.querySelector('#display');
 
 const observer = new MutationObserver((mutationsList, observer) => {
     for(const mutation of mutationsList) {
@@ -19,7 +19,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
     }
 });
 
-observer.observe(div_section, { 
+observer.observe(divSection, { 
     attributes: true, 
     childList: true, 
     subtree: false }
@@ -34,10 +34,22 @@ document.addEventListener("DOMContentLoaded", function() {
 /**
  * Load increment display data-type by 1 and call loadForm
  */
-function clickByCity() {
+async function clickByCity() {
     let html = document.getElementById('display');
     let pageIncrement = pageInc(html , '+');
     loadForm();
+
+    try {
+        let res = await fetch(`http://api.geonames.org/countryInfoJSON?username=hussain_naik`);
+        let data = await res.json();
+        
+        console.log(data);
+
+        data.geonames.forEach(country => {});
+        //http://api.geonames.org/searchJSON?country=GB&maxRows=10&username=hussain_naik&featureClass=P&style=short
+    } catch (error) {
+        console.log(error);
+    }
     html.setAttribute('data-type', pageIncrement);
 }
 
