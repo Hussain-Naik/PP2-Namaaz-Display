@@ -76,13 +76,14 @@ function clickByLocation() {
         try {
             //get current date
             let currentDate = new Date();
-            const day = currentDate.getDate();
+            let day = currentDate.getDate();
             let month = currentDate.getMonth() + 1;
             let year = currentDate.getFullYear();
             console.log(day+ '/'+month+"/"+year)
 
             let res = await fetch(`http://api.aladhan.com/v1/timings/${day}-${month}-${year}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data = await res.json();
+            
             console.log(data);
             //timing output
     
