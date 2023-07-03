@@ -46,23 +46,22 @@ function clickByCity() {
  * @param {*} data taken from the api fetch after json function
  * @param {*} date Pass date 
  */
-function populateData(data, date) {
+function populateData(data) {
     let element = document.getElementsByClassName('prayer-time');
     let title = document.getElementsByTagName('h3');
-    let x = date - 1;
     //Set h2 for georgian and hijri date
     title[0].innerHTML = 'georgian date';
     title[1].innerHTML = 'hijri date';
     //set fajr
-    element[0].innerHTML = data.data[x].timings.Fajr;
+    element[0].innerHTML = data.data.timings.Fajr;
     //set zohar
-    element[1].innerHTML = data.data[x].timings.Dhuhr;
+    element[1].innerHTML = data.data.timings.Dhuhr;
     //set asar
-    element[2].innerHTML = data.data[x].timings.Asr;
+    element[2].innerHTML = data.data.timings.Asr;
     //set maghrib
-    element[3].innerHTML = data.data[x].timings.Maghrib;
+    element[3].innerHTML = data.data.timings.Maghrib;
     //set isha
-    element[4].innerHTML = data.data[x].timings.Isha;
+    element[4].innerHTML = data.data.timings.Isha;
 }
 
 /**
@@ -82,11 +81,12 @@ function clickByLocation() {
             let year = currentDate.getFullYear();
             console.log(day+ '/'+month+"/"+year)
 
-            let res = await fetch(`https://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
+            let res = await fetch(`http://api.aladhan.com/v1/timings/${day}-${month}-${year}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data = await res.json();
+            console.log(data);
             //timing output
     
-            populateData(data, day);       
+            populateData(data);       
         } catch (error) {
             console.log(error);
         }
