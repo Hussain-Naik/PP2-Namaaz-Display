@@ -52,11 +52,19 @@ async function clickByCity() {
             countrySelect.appendChild(option);
         });
 
-        document.getElementById('country').addEventListener('change', () => {
+        document.getElementById('country').addEventListener('change', async () => {
             let countryCode = document.getElementById('country').value;
-            console.log(countryCode);
+            let res = await fetch(`http://api.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
+            let data = await res.json();
+            console.log(data);
+            let citySelect = document.getElementById('cities');
+            data.geonames.forEach(city => {
+                let option = document.createElement('option');
+                option.value = city.name;
+                citySelect.appendChild(option);
+            });
+            
         })
-        //http://api.geonames.org/searchJSON?country=GB&maxRows=10&username=hussain_naik&featureClass=P&style=short
     } catch (error) {
         console.log(error);
     }
