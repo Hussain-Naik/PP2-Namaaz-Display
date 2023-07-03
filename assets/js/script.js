@@ -44,8 +44,12 @@ async function clickByCity() {
         let data = await res.json();
         
         console.log(data);
-
-        data.geonames.forEach(country => {});
+        let countrySelect = document.getElementById('countries');
+        data.geonames.forEach(country => {
+            let option = document.createElement('option');
+            option.value = country.countryName;
+            countrySelect.appendChild(option);
+        });
         //http://api.geonames.org/searchJSON?country=GB&maxRows=10&username=hussain_naik&featureClass=P&style=short
     } catch (error) {
         console.log(error);
