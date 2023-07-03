@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
  * Load increment display data-type by 1 and call loadForm
  */
 async function clickByCity() {
-    let html = document.getElementById('display');
-    let pageIncrement = pageInc(html , '+');
     loadForm();
 
     try {
@@ -65,7 +63,6 @@ async function clickByCity() {
     } catch (error) {
         console.log(error);
     }
-    html.setAttribute('data-type', pageIncrement);
 }
 
 /**
@@ -224,7 +221,7 @@ function previousPage() {
     if (pageIncrement <= 0) {
         indexPage();
     } else if (pageIncrement == 1){
-        loadForm();
+        clickByCity();
     }
 
     //html.setAttribute('data-type', pageIncrement);
