@@ -74,8 +74,8 @@ function populateData(data) {
     let element = document.getElementsByClassName('prayer-time');
     let title = document.getElementsByTagName('h3');
     //Set h2 for georgian and hijri date
-    title[0].innerHTML = 'georgian date';
-    title[1].innerHTML = 'hijri date';
+    title[0].innerHTML = data.data.date.readable;
+    title[1].innerHTML = data.data.date.hijri.day + ' ' + data.data.date.hijri.month.en + ' ' + data.data.date.hijri.year;
     //set fajr
     element[0].innerHTML = data.data.timings.Fajr;
     //set zohar
