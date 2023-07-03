@@ -133,13 +133,31 @@ function clickByLocation() {
  * Fetch API data for selected city
  * increment data-type by 1 and call loadResult
  */
-function clickSubmit() {
+async function clickSubmit() {
     let html = document.getElementById('display');
-    
+    let city = document.getElementById('city').value;
+    let country = document.getElementById('country').value;
+    console.log(city);
+    console.log(country);
     loadResults();
-    // http://api.aladhan.com/v1/timingsByCity?city=Dubai&country=United Arab Emirates&method=15
 
+    try {
+        //get current date
+        let currentDate = new Date();
+        let day = currentDate.getDate();
+        let month = currentDate.getMonth() + 1;
+        let year = currentDate.getFullYear();
 
+        let res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${day}-${month}-${year}?city=${city}&country=${country}&method=15`);
+        let data = await res.json();
+        
+        console.log(data);
+        //timing output
+
+        populateData(data);       
+    } catch (error) {
+        console.log(error);
+    }
     let pageIncrement = pageInc(html , '+');
     html.setAttribute('data-type', pageIncrement);
 }
