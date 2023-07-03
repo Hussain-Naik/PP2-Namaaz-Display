@@ -52,8 +52,8 @@ async function clickByCity() {
             countrySelect.appendChild(option);
         });
 
-        countrySelect.addEventListener('change', () => {
-            let countryCode = document.getElementById('countries').value;
+        document.getElementById('country').addEventListener('change', () => {
+            let countryCode = document.getElementById('country').value;
             console.log(countryCode);
         })
         //http://api.geonames.org/searchJSON?country=GB&maxRows=10&username=hussain_naik&featureClass=P&style=short
