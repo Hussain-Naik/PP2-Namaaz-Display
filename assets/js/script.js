@@ -47,7 +47,8 @@ async function clickByCity() {
         let countrySelect = document.getElementById('countries');
         data.geonames.forEach(country => {
             let option = document.createElement('option');
-            option.value = country.countryName;
+            option.text = country.countryName;
+            option.value = country.countryCode;
             countrySelect.appendChild(option);
         });
         //http://api.geonames.org/searchJSON?country=GB&maxRows=10&username=hussain_naik&featureClass=P&style=short
