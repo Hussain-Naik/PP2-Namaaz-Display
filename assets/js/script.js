@@ -42,8 +42,6 @@ async function clickByCity() {
     try {
         let res = await fetch(`http://api.geonames.org/countryInfoJSON?username=hussain_naik`);
         let data = await res.json();
-        
-        console.log(data);
         let countrySelect = document.getElementById('countries');
         data.geonames.forEach(country => {
             let option = document.createElement('option');
@@ -56,7 +54,6 @@ async function clickByCity() {
             let countryCode = document.getElementById('country').value;
             let res = await fetch(`http://api.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
             let data = await res.json();
-            console.log(data);
             let citySelect = document.getElementById('cities');
             data.geonames.forEach(city => {
                 let option = document.createElement('option');
