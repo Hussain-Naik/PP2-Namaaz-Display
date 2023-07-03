@@ -140,7 +140,7 @@ function clickSubmit() {
     let html = document.getElementById('display');
     
     loadResults();
-    // http://api.aladhan.com/v1/calendarByCity/2017/4?city=London&country=United Kingdom&method=15
+    // http://api.aladhan.com/v1/timingsByCity?city=Dubai&country=United Arab Emirates&method=15
 
 
     let pageIncrement = pageInc(html , '+');
