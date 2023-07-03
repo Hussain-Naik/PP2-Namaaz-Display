@@ -68,14 +68,15 @@ async function clickByCity() {
 /**
  * populate the name time data from given data and day
  * @param {*} data taken from the api fetch after json function
- * @param {*} date Pass date 
+ * @param {*} location Pass location for heading display 
  */
-function populateData(data) {
+function populateData(data, location) {
     let element = document.getElementsByClassName('prayer-time');
     let title = document.getElementsByTagName('h3');
     //Set h2 for georgian and hijri date
     title[0].innerHTML = data.data.date.readable;
     title[1].innerHTML = data.data.date.hijri.day + ' ' + data.data.date.hijri.month.en + ' ' + data.data.date.hijri.year;
+    title[2].innerHTML = location;
     //set fajr
     element[0].innerHTML = data.data.timings.Fajr;
     //set zohar
@@ -111,7 +112,7 @@ function clickByLocation() {
             console.log(data);
             //timing output
     
-            populateData(data);       
+            populateData(data, 'Current GPS Location');       
         } catch (error) {
             console.log(error);
         }
@@ -154,7 +155,7 @@ async function clickSubmit() {
         console.log(data);
         //timing output
 
-        populateData(data);       
+        populateData(data, city);       
     } catch (error) {
         console.log(error);
     }
@@ -193,6 +194,7 @@ function loadForm() {
 
 function loadResults() {
     let insert = `
+    <h3></h3>
     <h3></h3>
     <h3></h3>
     <div class="prayer">
