@@ -25,8 +25,7 @@ observer.observe(divSection, {
     subtree: false }
 );
 
-// Wait for the DOM to finish loading before loading page
-// Get the button elements and add event listeners to them
+// Wait for the DOM to finish loading before loading initial page
 
 document.addEventListener("DOMContentLoaded", function() {
 	loadPage('index');
