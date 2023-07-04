@@ -247,6 +247,8 @@ function loadResults() {
     </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
+
+    startTime();
 }
 /**
  * Load the previous page display depending on user current display
@@ -318,5 +320,24 @@ function loadPage(page) {
     } else {
         indexPage();
     }
+}
+
+function startTime() {
+    let today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    m = checkTime(m);
+    console.log(h + ":" + m);
+    if (document.getElementsByClassName('prayer').length > 0 ) {
+        setTimeout(startTime, 1000);
+    }
+    else {
+        clearTimeout();
+    }
+}
+  
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
 }
 
