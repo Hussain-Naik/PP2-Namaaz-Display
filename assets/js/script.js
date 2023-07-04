@@ -355,10 +355,10 @@ function checkTime(i) {
 }
 
 /**
- * Function to return the time difference between two time intervals
- * @param {*} time1 start time parameter
- * @param {*} time2 end time parameter
- * @returns value of time2 - time1
+ * Function to return the time difference between two time intervals in seconds
+ * @param {*} time1 start time parameter as string
+ * @param {*} time2 end time parameter as string
+ * @returns value of time2 - time1 in seconds
  */
 function timeDifference(time1, time2) {
     //code to process string to number
