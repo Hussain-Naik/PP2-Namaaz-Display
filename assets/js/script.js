@@ -73,7 +73,7 @@ function populateData(data1, data2, location) {
     let element = document.getElementsByClassName('prayer-time');
     let title = document.getElementsByTagName('h3');
     //Set h2 for georgian and hijri date
-    title[0].innerHTML = data1.data.date.readable + ' <span></span>';
+    title[0].innerHTML = data1.data.date.readable + ' <span id="clock"></span>';
     title[1].innerHTML = data1.data.date.hijri.day + ' ' + data1.data.date.hijri.month.en + ' ' + data1.data.date.hijri.year;
     title[2].innerHTML = location;
     //set fajr
@@ -207,7 +207,7 @@ function loadForm() {
 
 function loadResults() {
     let insert = `
-    <h3></h3>
+    <h3><span id="clock"></span></h3>
     <h3></h3>
     <h3></h3>
     <div class="prayer">
@@ -333,10 +333,10 @@ function startTime() {
     m = checkTime(m);
     s = checkTime(s);
     console.log(h + ":" + m);
-    let title = document.getElementsByTagName('span');
+    let clock = document.getElementById('clock');
     if (document.getElementsByClassName('prayer').length > 0 ) {
         setTimeout(startTime, 1000);
-        title[0].innerHTML = h + ":" + m + ":" + s;
+        clock.innerHTML = h + ":" + m + ":" + s;
     }
     else {
         clearTimeout();
