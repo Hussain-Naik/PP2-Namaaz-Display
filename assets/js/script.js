@@ -336,7 +336,7 @@ function startTime() {
     
     if (document.getElementsByClassName('prayer').length > 0 ) {
         let timeArray = document.getElementsByClassName('current');
-        console.log(timeDifference(timeArray[0].textContent, timeArray[1].textContent));
+        console.log(convertToTime(timeDifference(timeArray[0].textContent, timeArray[1].textContent)));
         setTimeout(startTime, 1000);
         clock.innerHTML = h + ":" + m + ":" + s;
     }
@@ -376,9 +376,10 @@ function timeDifference(time1, time2) {
  * @returns return string as HH:MM
  */
 function convertToTime(seconds) {
-    let h = seconds / 3600;
+    let h = Math.floor(seconds / 3600);
     let m = seconds % 3600;
     m = m / 60;
-    console.log(h +' ' +m);
+    m = checkTime(m);
+    h = checkTime(h);
     return h + ':' + m;
 }
