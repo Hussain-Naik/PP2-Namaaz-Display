@@ -336,7 +336,7 @@ function startTime() {
     
     if (document.getElementsByClassName('prayer').length > 0 ) {
         let timeArray = document.getElementsByClassName('current');
-        console.log(timeArray[0].textContent);
+        console.log(timeDifference(timeArray[0].textContent, timeArray[1].textContent));
         setTimeout(startTime, 1000);
         clock.innerHTML = h + ":" + m + ":" + s;
     }
