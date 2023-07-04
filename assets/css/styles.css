@@ -90,25 +90,47 @@ h3 {
     align-items: center;
     width: calc(100% - 1rem);
     position: relative;
-    border: #1F271B .5rem solid;
+    border: #1F271B .4rem solid;
     border-radius: .75rem;
 }
 
-.prayer-name {
-    background-color: #1F271B;
+.active .prayer-name {
+    background-color: var(--color1);
     width: 100%;
-    padding: .25rem 0;
+    padding: 0;
+    padding-bottom: .4rem;
     margin: 0;
     text-align: center;
-    color: #5A9367;
+    color: var(--color3);
 }
 
-.prayer-time {
-    width: calc(100% - 1rem);
-    padding: .25rem 0;
+.prayer-name {
+    width: 100%;
+    padding: .1rem 0;
     margin: 0;
     text-align: center;
-    border-top: 0;
+    color: var(--color1);
+    background-color: inherit;
+}
+
+.active .prayer-time {
+    width: 100%;
+    padding: .1rem 0;
+    margin: 0;
+    text-align: center;
+    color: var(--color1);
+    background-color: inherit;
+    
+}
+.prayer-time {
+    background-color: var(--color1);
+    width: 100%;
+    padding: 0;
+    padding-top: .4rem;
+    margin: 0;
+    text-align: center;
+    color: var(--color3);
+    
     
 }
 
