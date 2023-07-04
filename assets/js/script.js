@@ -370,7 +370,11 @@ function timeDifference(time1, time2) {
     let timeDiff = endSec - startSec;
     return timeDiff;
 }
-
+/**
+ * Function to convert seconds to hours and minutes
+ * @param {*} seconds paramter 
+ * @returns return string as HH:MM
+ */
 function convertToTime(seconds) {
     let h = seconds / 3600;
     let m = seconds % 3600;
