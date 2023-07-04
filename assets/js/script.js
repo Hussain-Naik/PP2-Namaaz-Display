@@ -322,6 +322,9 @@ function loadPage(page) {
     }
 }
 
+/**
+ * Start clock with one second time intervals
+ */
 function startTime() {
     let today = new Date();
     let h = today.getHours();
@@ -335,9 +338,13 @@ function startTime() {
         clearTimeout();
     }
 }
-  
+ /**
+  * Function to return value for number less than 10 with leading zero
+  * @param {*} i 
+  * @returns value of string with leading zero
+  */  
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {i = "0" + i};
     return i;
 }
 
