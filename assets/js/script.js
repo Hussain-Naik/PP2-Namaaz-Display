@@ -354,3 +354,14 @@ function checkTime(i) {
     return i;
 }
 
+/**
+ * Function to return the time difference between two time intervals
+ * @param {*} time1 start time parameter
+ * @param {*} time2 end time parameter
+ * @returns value of time2 - time1
+ */
+function timeDifference(time1, time2) {
+    let timeDiff = time2 - time1;
+    return timeDiff;
+}
+
