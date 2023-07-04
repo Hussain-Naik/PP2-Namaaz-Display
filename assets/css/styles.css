@@ -115,6 +115,15 @@ h3 {
 
 }
 
+.active {
+    visibility: visible ;
+}
+
+.hidden {
+    visibility: hidden ;
+    display: none;
+}
+
 .button:hover {
     cursor: pointer;
 }
