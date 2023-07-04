@@ -211,7 +211,7 @@ function loadResults() {
     <h3></h3>
     <h3></h3>
     <div class="prayer">
-        <div class="prayers">
+        <div class="prayers active">
             <div class="timer">
 
             </div>
@@ -219,22 +219,22 @@ function loadResults() {
             <h3 class="prayer-time current active"><i class="fa-solid fa-spinner fa-spin"></i></h3>
             <h3 class="prayer-time next hidden"><i class="fa-solid fa-spinner fa-spin"></i></h3>
         </div>
-        <div class="prayers">
+        <div class="prayers active">
             <h3 class="prayer-name">Zohar</h3>
             <h3 class="prayer-time current active"><i class="fa-solid fa-spinner fa-spin"></i></h3>
             <h3 class="prayer-time next hidden"><i class="fa-solid fa-spinner fa-spin"></i></h3>
         </div>
-        <div class="prayers">
+        <div class="prayers active">
             <h3 class="prayer-name">Asar</h3>
             <h3 class="prayer-time current active"><i class="fa-solid fa-spinner fa-spin"></i></h3>
             <h3 class="prayer-time next hidden"><i class="fa-solid fa-spinner fa-spin"></i></h3>
         </div>
-        <div class="prayers">
+        <div class="prayers active">
             <h3 class="prayer-name">Maghrib</h3>
             <h3 class="prayer-time current active"><i class="fa-solid fa-spinner fa-spin"></i></h3>
             <h3 class="prayer-time next hidden"><i class="fa-solid fa-spinner fa-spin"></i></h3>
         </div>
-        <div class="prayers">
+        <div class="prayers active">
             <h3 class="prayer-name">Isha</h3>
             <h3 class="prayer-time current active"><i class="fa-solid fa-spinner fa-spin"></i></h3>
             <h3 class="prayer-time next hidden"><i class="fa-solid fa-spinner fa-spin"></i></h3>
