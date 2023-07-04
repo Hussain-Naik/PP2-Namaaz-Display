@@ -361,7 +361,7 @@ function checkTime(i) {
  * @returns value of time2 - time1
  */
 function timeDifference(time1, time2) {
-    let timeDiff = time2 - time1;
+    let timeDiff = Number(time2) - Number(time1);
     return timeDiff;
 }
 
