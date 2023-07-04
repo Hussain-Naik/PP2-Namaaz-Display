@@ -73,7 +73,7 @@ function populateData(data1, data2, location) {
     let element = document.getElementsByClassName('prayer-time');
     let title = document.getElementsByTagName('h3');
     //Set h2 for georgian and hijri date
-    title[0].innerHTML = data1.data.date.readable;
+    title[0].innerHTML = data1.data.date.readable + ' <span></span>';
     title[1].innerHTML = data1.data.date.hijri.day + ' ' + data1.data.date.hijri.month.en + ' ' + data1.data.date.hijri.year;
     title[2].innerHTML = location;
     //set fajr
@@ -329,10 +329,14 @@ function startTime() {
     let today = new Date();
     let h = today.getHours();
     let m = today.getMinutes();
+    let s = today.getSeconds();
     m = checkTime(m);
+    s = checkTime(s);
     console.log(h + ":" + m);
+    let title = document.getElementsByTagName('span');
     if (document.getElementsByClassName('prayer').length > 0 ) {
         setTimeout(startTime, 1000);
+        title[0].innerHTML = h + ":" + m + ":" + s;
     }
     else {
         clearTimeout();
