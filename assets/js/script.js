@@ -112,7 +112,7 @@ function clickByLocation() {
             console.log(data);
             //timing output
     
-            populateData(data, pos);       
+            populateData(data, pos);
         } catch (error) {
             console.log(error);
         }
@@ -203,22 +203,27 @@ function loadResults() {
 
             </div>
             <h3 class="prayer-name">Fajr</h3>
+            <h3 class="prayer-time current active">05:00</h3>
             <h3 class="prayer-time">05:00</h3>
         </div>
         <div class="prayers">
             <h3 class="prayer-name">Zohar</h3>
+            <h3 class="prayer-time current">05:00</h3>
             <h3 class="prayer-time">05:00</h3>
         </div>
         <div class="prayers">
             <h3 class="prayer-name">Asar</h3>
+            <h3 class="prayer-time current">05:00</h3>
             <h3 class="prayer-time">05:00</h3>
         </div>
         <div class="prayers">
             <h3 class="prayer-name">Maghrib</h3>
+            <h3 class="prayer-time current">05:00</h3>
             <h3 class="prayer-time">05:00</h3>
         </div>
         <div class="prayers">
             <h3 class="prayer-name">Isha</h3>
+            <h3 class="prayer-time current">05:00</h3>
             <h3 class="prayer-time">05:00</h3>
         </div>
     </div>
