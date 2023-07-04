@@ -371,3 +371,10 @@ function timeDifference(time1, time2) {
     return timeDiff;
 }
 
+function convertToTime(seconds) {
+    let h = seconds / 3600;
+    let m = seconds % 3600;
+    m = m / 60;
+    console.log(h +' ' +m);
+    return h + ':' + m;
+}
