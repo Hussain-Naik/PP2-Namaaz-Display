@@ -342,8 +342,12 @@ function startTime() {
     
     if (document.getElementsByClassName('prayer').length > 0 ) {
         let timeArray = document.getElementsByClassName('current');
-        console.log(convertToTime(timeDifference(timeArray[0].textContent, timeArray[1].textContent)));
+        let activePrayer = document.getElementsByClassName('prayers');
+        //console.log(convertToTime(timeDifference(timeArray[0].textContent, timeArray[1].textContent)));
         setTimeout(startTime, 1000);
+        for (i = 0; i < activePrayer.length; i++) {
+            console.log(activePrayer[i].getAttribute('data-type'));
+          }
         clock.innerHTML = h + ":" + m + ":" + s;
     }
     else {
