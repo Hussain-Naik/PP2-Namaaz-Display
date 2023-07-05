@@ -347,6 +347,10 @@ function startTime() {
         clearTimeout();
     }
 }
+/**
+ * Function to remove active class and switch time to next day
+ * @param {*} time parameter of current time
+ */
 function changeActive(time){
     let activePrayer = document.getElementsByClassName('prayers');
     for (i = 0; i < activePrayer.length -1; i++) {
