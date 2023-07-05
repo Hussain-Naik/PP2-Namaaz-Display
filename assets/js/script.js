@@ -339,6 +339,7 @@ function startTime() {
     if (document.getElementsByClassName('prayer').length > 0 ) {
         changeActive(h + ":" + m)
         setTimeout(startTime, 1000);
+        insertTimer();
         clock.innerHTML = h + ":" + m + ":" + s;
     }
     else {
@@ -352,9 +353,10 @@ function startTime() {
 function changeActive(time){
     let activePrayer = document.getElementsByClassName('prayers');
     for (i = 0; i < activePrayer.length -1; i++) {
-        if (timeDifference(time,activePrayer[i].getAttribute('data-type')) < 0){
+        if (timeDifference(time,activePrayer[i].getAttribute('data-type')) < 0 && activePrayer[i].children.length > 3){
             activePrayer[i].classList.remove('active');
             let elements = activePrayer[i].children;
+            activePrayer[i].removeChild(activePrayer[i].lastElementChild);
             elements[1].classList.remove('active');
             elements[1].classList.add('hidden');
             elements[2].classList.remove('hidden');
@@ -367,7 +369,9 @@ function changeActive(time){
 
 function insertTimer(){
     let element = document.getElementsByClassName('prayers active');
-    element[0].innerHTML += `<div class="timer"></div>`;
+    if (element[0].children.length < 4){
+        element[0].innerHTML += `<div class="timer"></div>`;
+    }
 }
  /**
   * Function to return value for number less than 10 with leading zero
