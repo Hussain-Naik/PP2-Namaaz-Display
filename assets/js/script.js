@@ -221,7 +221,6 @@ function loadResults() {
             <h3 class="prayer-name">Fajr</h3>
             <h3 class="prayer-time current active"><i class="fa-solid fa-spinner fa-spin"></i></h3>
             <h3 class="prayer-time next hidden"><i class="fa-solid fa-spinner fa-spin"></i></h3>
-            <div class="timer"></div>
         </div>
         <div class="prayers active" data-type="">
             <h3 class="prayer-name">Zohar</h3>
@@ -251,7 +250,6 @@ function loadResults() {
     </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
-
     startTime();
 }
 /**
@@ -357,7 +355,6 @@ function changeActive(time){
         if (timeDifference(time,activePrayer[i].getAttribute('data-type')) < 0){
             activePrayer[i].classList.remove('active');
             let elements = activePrayer[i].children;
-            console.log(elements);
             elements[1].classList.remove('active');
             elements[1].classList.add('hidden');
             elements[2].classList.remove('hidden');
@@ -368,6 +365,10 @@ function changeActive(time){
 
 }
 
+function insertTimer(){
+    let element = document.getElementsByClassName('prayers active');
+    element[0].innerHTML += `<div class="timer"></div>`;
+}
  /**
   * Function to return value for number less than 10 with leading zero
   * @param {*} i 
