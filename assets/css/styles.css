@@ -92,6 +92,7 @@ h3 {
     position: relative;
     border: #1F271B .4rem solid;
     border-radius: .75rem;
+    opacity: .8;
 }
 
 .active .prayer-name {
@@ -136,6 +137,7 @@ h3 {
 
 .active {
     visibility: visible ;
+    opacity: 1;
 }
 
 .hidden {
