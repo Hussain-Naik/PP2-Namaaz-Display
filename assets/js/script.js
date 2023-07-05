@@ -218,12 +218,10 @@ function loadResults() {
     <h3></h3>
     <div class="prayer">
         <div class="prayers active" data-type="">
-            <div class="timer">
-
-            </div>
             <h3 class="prayer-name">Fajr</h3>
             <h3 class="prayer-time current active"><i class="fa-solid fa-spinner fa-spin"></i></h3>
             <h3 class="prayer-time next hidden"><i class="fa-solid fa-spinner fa-spin"></i></h3>
+            <div class="timer"></div>
         </div>
         <div class="prayers active" data-type="">
             <h3 class="prayer-name">Zohar</h3>
@@ -354,10 +352,13 @@ function changeActive(time){
     for (i = 0; i < activePrayer.length -1; i++) {
         if (timeDifference(time,activePrayer[i].getAttribute('data-type')) < 0){
             activePrayer[i].classList.remove('active');
+            let elements = activePrayer[i].children;
+            console.log(elements);
         }
     }
 
 }
+
  /**
   * Function to return value for number less than 10 with leading zero
   * @param {*} i 
