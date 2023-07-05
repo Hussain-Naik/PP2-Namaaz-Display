@@ -354,6 +354,11 @@ function changeActive(time){
             activePrayer[i].classList.remove('active');
             let elements = activePrayer[i].children;
             console.log(elements);
+            elements[1].classList.remove('active');
+            elements[1].classList.add('hidden');
+            elements[2].classList.remove('hidden');
+            elements[2].classList.add('active');
+            
         }
     }
 
