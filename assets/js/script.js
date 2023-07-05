@@ -341,18 +341,22 @@ function startTime() {
     let clock = document.getElementById('clock');
     
     if (document.getElementsByClassName('prayer').length > 0 ) {
-        let timeArray = document.getElementsByClassName('current');
-        let activePrayer = document.getElementsByClassName('prayers');
-        //console.log(convertToTime(timeDifference(timeArray[0].textContent, timeArray[1].textContent)));
+        changeActive(h + ":" + m)
         setTimeout(startTime, 1000);
-        for (i = 0; i < activePrayer.length; i++) {
-            console.log(activePrayer[i].getAttribute('data-type'));
-          }
         clock.innerHTML = h + ":" + m + ":" + s;
     }
     else {
         clearTimeout();
     }
+}
+function changeActive(time){
+    let activePrayer = document.getElementsByClassName('prayers');
+    for (i = 0; i < activePrayer.length -1; i++) {
+        if (timeDifference(time,activePrayer[i].getAttribute('data-type')) < 0){
+            activePrayer[i].classList.remove('active');
+        }
+    }
+
 }
  /**
   * Function to return value for number less than 10 with leading zero
