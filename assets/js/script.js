@@ -71,6 +71,7 @@ async function clickByCity() {
  */
 function populateData(data1, data2, location) {
     let element = document.getElementsByClassName('prayer-time');
+    let prayers = document.getElementsByClassName('prayers');
     let title = document.getElementsByTagName('h3');
     //Set h2 for georgian and hijri date
     title[0].innerHTML = data1.data.date.readable + ' <span id="clock"></span>';
@@ -78,14 +79,19 @@ function populateData(data1, data2, location) {
     title[2].innerHTML = location;
     //set fajr
     element[0].innerHTML = data1.data.timings.Fajr;
+    prayers[0].setAttribute('data-type', data1.data.timings.Sunrise);
     //set zohar
     element[2].innerHTML = data1.data.timings.Dhuhr;
+    prayers[1].setAttribute('data-type', data1.data.timings.Asr);
     //set asar
     element[4].innerHTML = data1.data.timings.Asr;
+    prayers[2].setAttribute('data-type', data1.data.timings.Sunset);
     //set maghrib
     element[6].innerHTML = data1.data.timings.Maghrib;
+    prayers[3].setAttribute('data-type', data1.data.timings.Isha);
     //set isha
     element[8].innerHTML = data1.data.timings.Isha;
+    prayers[4].setAttribute('data-type', data1.data.timings.Fajr);
     //set fajr next day
     element[1].innerHTML = data2.data.timings.Fajr;
     //set zohar next day
