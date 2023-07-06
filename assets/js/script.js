@@ -370,7 +370,19 @@ function changeActive(time){
  */
 function insertTimer(){
     let element = document.getElementsByClassName('prayers active');
-    if (element[0].children.length < 4){
+    if(document.getElementsByClassName('prayers active').length === 5 && element[element.length - 1].children.length < 4) {
+        element[element.length - 1].innerHTML += `
+        <div class="timer">
+            <div class ="percent" style="--num:1;">
+                <svg>
+                    <circle cx="40" cy="40" r="38"></circle>
+                    <circle cx="40" cy="40" r="38"></circle>
+                </svg>
+                <div class="countdown">
+                </div>
+            </div>
+        </div>`;
+    }else if (element[0].children.length < 4 && document.getElementsByClassName('prayers active').length < 5){
         element[0].innerHTML += `
         <div class="timer">
             <div class ="percent" style="--num:1;">
