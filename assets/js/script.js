@@ -116,17 +116,16 @@ function clickByLocation() {
         try {
             //get current date
             let currentDate = new Date();
-            let day = currentDate.getDate();
-            let month = currentDate.getMonth() + 1;
-            let year = currentDate.getFullYear();
-            console.log(day+ '/'+month+"/"+year)
+            let nextDate = new Date();
+            nextDate.setDate(currentDate.getDate() + 1);
 
-            let res = await fetch(`http://api.aladhan.com/v1/timings/${day}-${month}-${year}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
+            let res = await fetch(`http://api.aladhan.com/v1/timings/${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data1 = await res.json();
-            res = await fetch(`http://api.aladhan.com/v1/timings/${day + 1}-${month}-${year}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
+            res = await fetch(`http://api.aladhan.com/v1/timings/${nextDate.getDate()}-${nextDate.getMonth()}-${nextDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data2 = await res.json();
             
             console.log(data1);
+            console.log(data2);
             //timing output
     
             populateData(data1, data2, pos);
@@ -162,13 +161,12 @@ async function clickSubmit() {
     try {
         //get current date
         let currentDate = new Date();
-        let day = currentDate.getDate();
-        let month = currentDate.getMonth() + 1;
-        let year = currentDate.getFullYear();
+        let nextDate = new Date();
+        nextDate.setDate(currentDate.getDate() + 1);
 
-        let res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${day}-${month}-${year}?city=${city}&country=${country}&method=15`);
+        let res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}?city=${city}&country=${country}&method=15`);
         let data1 = await res.json();
-        res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${day + 1}-${month}-${year}?city=${city}&country=${country}&method=15`);
+        res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${nextDate.getDate()}-${nextDate.getMonth()}-${nextDate.getFullYear()}?city=${city}&country=${country}&method=15`);
         let data2 = await res.json();
         
         console.log(data1);
