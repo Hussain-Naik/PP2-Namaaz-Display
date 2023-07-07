@@ -352,7 +352,7 @@ function startTime() {
 function changeActive(time){
     let activePrayer = document.getElementsByClassName('prayers');
     for (i = 0; i < activePrayer.length -1; i++) {
-        if (timeDifference(time,activePrayer[i].getAttribute('data-type')) < 0 && activePrayer[i].children.length > 3){
+        if (timeDifference(time, activePrayer[i].getAttribute('data-type'), '00:00') < 0 && activePrayer[i].children.length > 3){
             activePrayer[i].classList.remove('active');
             let elements = activePrayer[i].children;
             activePrayer[i].removeChild(activePrayer[i].lastElementChild);
@@ -386,12 +386,21 @@ function insertTimer(){
 }
 
 function updateTimer() {
-    let element = document.getElementsByClassName('prayers active');
-    let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].getAttribute('data-type'));
-    let limit = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, element[0].getAttribute('data-type'));
-    let percentage = Math.floor(timer / limit * 100);
-    document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`)
-    document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
+    const element = document.getElementsByClassName('prayers active');
+    if (element.length > 1) {
+        let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].getAttribute('data-type'), '00:00');
+        let limit = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, element[0].getAttribute('data-type'), '00:00');
+        let percentage = Math.floor(timer / limit * 100);
+        document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`);
+        document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
+    }
+    else {
+        let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].getAttribute('data-type'), '24:00');
+        let limit = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, element[0].getAttribute('data-type'), '24:00');
+        let percentage = Math.floor(timer / limit * 100);
+        document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`);
+        document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
+    }
 
 
 }
@@ -409,13 +418,14 @@ function checkTime(i) {
  * Function to return the time difference between two time intervals in seconds
  * @param {*} time1 start time parameter as string
  * @param {*} time2 end time parameter as string
+ * @param {*} exception 24 hour displacemnt for isha time
  * @returns value of time2 - time1 in seconds
  */
-function timeDifference(time1, time2) {
+function timeDifference(time1, time2, exception) {
     //code to process string to number
     
     let startSec = convertToSeconds(time1);
-    let endSec = convertToSeconds(time2);
+    let endSec = convertToSeconds(time2) + convertToSeconds(exception);
 
     let timeDiff = endSec - startSec;
     return timeDiff;
