@@ -370,7 +370,7 @@ function changeActive(time){
  */
 function insertTimer(){
     let element = document.getElementsByClassName('prayers active');
-    if(document.getElementsByClassName('prayers active').length === 5 && element[element.length - 1].children.length < 4) {
+    if(element.length === 5 && element[element.length - 1].children.length < 4) {
         element[element.length - 1].innerHTML += `
         <div class="timer">
             <div class ="percent" style="--num:1;">
