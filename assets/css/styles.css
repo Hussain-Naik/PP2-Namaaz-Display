@@ -203,9 +203,9 @@ h3 {
 .timer .percent svg circle{
     width: 100%;
     height: 100%;
-    fill: transparent;
+    fill: var(--color1);
     stroke-width: 2;
-    stroke: #1F271B;
+    stroke: var(--color1);
 }
 
 .timer .percent svg circle:nth-child(2){
