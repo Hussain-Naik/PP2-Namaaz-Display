@@ -400,14 +400,20 @@ function insertTimer(){
 function updateTimer() {
     const element = document.getElementsByClassName('timer');
     let check = document.getElementsByClassName('prayers active')
-    if (check.length > 1) {
+    if (check.length > 1 && check.length < 5) {
         let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].parentElement.getAttribute('data-type'), '00:00');
         let limit = timeDifference(element[0].parentElement.getElementsByClassName('active')[0].innerHTML, element[0].parentElement.getAttribute('data-type'), '00:00');
         let percentage = Math.floor(timer / limit * 100);
         document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`);
         document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
     }
-    else {
+    else if (check.length == 5) {
+        let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].parentElement.getAttribute('data-type'), '00:00');
+        let limit = timeDifference('00:00', element[0].parentElement.getAttribute('data-type'), '00:00');
+        let percentage = Math.floor(timer / limit * 100);
+        document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`);
+        document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
+    } else {
         let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].parentElement.getAttribute('data-type'), '24:00');
         let limit = timeDifference(element[0].parentElement.getElementsByClassName('active')[0].innerHTML, element[0].parentElement.getAttribute('data-type'), '24:00');
         let percentage = Math.floor(timer / limit * 100);
