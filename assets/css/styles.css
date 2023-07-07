@@ -182,8 +182,8 @@ h3 {
     width: 5rem;
     height: 5rem;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -.6rem;
+    left: -1.5rem;
     z-index: 99;
 }
 
@@ -212,4 +212,11 @@ h3 {
     stroke: var(--color3);
     stroke-dasharray: var(--num1);
     stroke-dashoffset: calc(var(--num1) - (var(--num1) * var(--num)) / 100);
+}
+
+.countdown {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    color: var(--color2);
 }
