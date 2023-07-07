@@ -397,10 +397,9 @@ function checkTime(i) {
  */
 function timeDifference(time1, time2) {
     //code to process string to number
-    let time1Array = time1.split(':');
-    let startSec = (time1Array[0] * 60 * 60) + (time1Array[1] * 60);
-    let time2Array = time2.split(':');
-    let endSec = (time2Array[0] * 60 * 60) + (time2Array[1] * 60);
+    
+    let startSec = convertToSeconds(time1);
+    let endSec = convertToSeconds(time2);
 
     let timeDiff = endSec - startSec;
     return timeDiff;
