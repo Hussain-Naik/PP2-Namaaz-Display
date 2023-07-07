@@ -405,6 +405,16 @@ function timeDifference(time1, time2) {
     let timeDiff = endSec - startSec;
     return timeDiff;
 }
+
+function convertToSeconds(arg) {
+    let seconds = 0;
+    let array = arg.split(':');
+    for (let i = 0; i < array.length; i++) {
+        
+    }
+    console.log(array);
+    return seconds;
+}
 /**
  * Function to convert seconds to hours and minutes
  * @param {*} seconds paramter 
