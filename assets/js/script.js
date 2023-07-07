@@ -386,7 +386,8 @@ function updateTimer() {
     let element = document.getElementsByClassName('prayers active');
     let timer = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, document.getElementById('clock').innerHTML);
     let limit = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, element[0].getAttribute('data-type'));
-    let percentage = Math.floor(timer / limit) * 100;
+    let percentage = Math.floor(timer / limit * 100);
+    document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`)
     console.log(percentage);
 
 
