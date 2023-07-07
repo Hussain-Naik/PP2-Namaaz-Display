@@ -335,7 +335,7 @@ function startTime() {
     let clock = document.getElementById('clock');
     
     if (document.getElementsByClassName('prayer').length > 0 ) {
-        changeActive(h + ":" + m)
+        changeActive(h + ":" + m + ":" + s)
         setTimeout(startTime, 1000);
         insertTimer();
         updateTimer();
