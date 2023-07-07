@@ -365,7 +365,7 @@ function changeActive(time){
 
 }
 /**
- * Function to add timer HTML
+ * Function to add timer HTML;
  */
 function insertTimer(){
     let element = document.getElementsByClassName('prayers active');
@@ -380,6 +380,16 @@ function insertTimer(){
             </div>
         </div>`;
     }
+}
+
+function updateTimer() {
+    let element = document.getElementsByClassName('prayers active');
+    let timer = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, document.getElementById('clock').innerHTML);
+    let limit = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, element[0].getAttribute('data-type'));
+    console.log(convertToTime(limit));
+    console.log(convertToTime(timer));
+
+
 }
  /**
   * Function to return value for number less than 10 with leading zero
@@ -430,8 +440,10 @@ function convertToSeconds(arg) {
 function convertToTime(seconds) {
     let h = Math.floor(seconds / 3600);
     let m = seconds % 3600;
-    m = m / 60;
+    let s = m % 60;
+    m = Math.floor(m / 60);
     m = checkTime(m);
     h = checkTime(h);
-    return h + ':' + m;
+    s = checkTime(s);
+    return h + ':' + m + ':' + s;
 }
