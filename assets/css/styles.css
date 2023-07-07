@@ -4,6 +4,7 @@
     --color1: #1F271B;
     --color2: #F3FCF0;
     --color3: #5A9367;
+    --num1: 249;
 }
 
 * {
@@ -175,4 +176,40 @@ h3 {
     font-family: Oxygen, sans-serif;
     text-transform: uppercase;
     margin-bottom: .4rem;
+}
+
+.timer {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.timer .percent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotate(270deg);
+}
+
+.timer .percent svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.timer .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #1F271B;
+}
+
+.timer .percent svg circle:nth-child(2){
+    stroke: var(--color3);
+    stroke-dasharray: var(--num1);
+    stroke-dashoffset: calc(var(--num1) - (var(--num1) * var(--num)) / 100);
 }
