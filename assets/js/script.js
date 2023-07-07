@@ -378,6 +378,8 @@ function insertTimer(){
                     <circle cx="40" cy="40" r="38"></circle>
                     <circle cx="40" cy="40" r="38"></circle>
                 </svg>
+                <div class="countdown">
+                </div>
             </div>
         </div>`;
     }
@@ -389,6 +391,7 @@ function updateTimer() {
     let limit = timeDifference(element[0].getElementsByClassName('active')[0].innerHTML, element[0].getAttribute('data-type'));
     let percentage = Math.floor(timer / limit * 100);
     document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`)
+    document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
 
 
 }
