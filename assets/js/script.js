@@ -405,7 +405,11 @@ function timeDifference(time1, time2) {
     let timeDiff = endSec - startSec;
     return timeDiff;
 }
-
+/**
+ * function to convert time into seconds
+ * @param {*} arg parameter for time string
+ * @returns time converted in seconds
+ */
 function convertToSeconds(arg) {
     let seconds = 0;
     let array = arg.split(':');
