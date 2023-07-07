@@ -410,9 +410,11 @@ function convertToSeconds(arg) {
     let seconds = 0;
     let array = arg.split(':');
     for (let i = 0; i < array.length; i++) {
-        
+        for (let x = 2; x > i; x--) {
+            array[i] *= 60;
+        }
+        seconds += Number(array[i]);
     }
-    console.log(array);
     return seconds;
 }
 /**
