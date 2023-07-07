@@ -449,5 +449,8 @@ function convertToTime(seconds) {
     m = checkTime(m);
     h = checkTime(h);
     s = checkTime(s);
+    if (seconds < 0) {
+        return  '00:00:00';
+    }
     return h + ':' + m + ':' + s;
 }
