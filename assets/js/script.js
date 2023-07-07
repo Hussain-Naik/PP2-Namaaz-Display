@@ -364,7 +364,9 @@ function changeActive(time){
     }
 
 }
-
+/**
+ * Function to add timer HTML
+ */
 function insertTimer(){
     let element = document.getElementsByClassName('prayers active');
     if (element[0].children.length < 4){
