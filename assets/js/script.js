@@ -339,11 +339,10 @@ function startTime() {
     let clock = document.getElementById('clock');
     
     if (document.getElementsByClassName('prayer').length > 0 ) {
-        changeActive(h + ":" + m + ":" + s)
+        
         setTimeout(startTime, 1000);
         if (document.getElementsByClassName('fa-solid').length == 0) {
-            insertTimer();
-            updateTimer();
+            changeActive(h + ":" + m + ":" + s); 
         }
         
         clock.innerHTML = h + ":" + m + ":" + s;
@@ -370,6 +369,8 @@ function changeActive(time){
             
         }
     }
+    insertTimer();
+    updateTimer();
     if (document.getElementsByClassName('timer').length > 1) {
         document.getElementsByClassName('timer')[1].remove();
     }
