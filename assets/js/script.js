@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 /**
  * Load increment display data-type by 1 and call loadForm
+ * Fetch API data for country and city data
  */
 async function clickByCity() {
     loadForm();
@@ -66,7 +67,8 @@ async function clickByCity() {
 
 /**
  * populate the name time data from given data and day
- * @param {*} data taken from the api fetch after json function
+ * @param {*} data1 current date JSON data
+ * @param {*} data2 next day JSON data
  * @param {*} location Pass location for heading display 
  */
 function populateData(data1, data2, location) {
@@ -105,7 +107,7 @@ function populateData(data1, data2, location) {
 }
 
 /**
- * Load increment display data-type by 1 and call loadResult
+ * Fetch API data for user location
  */
 function clickByLocation() {
     let html = document.getElementById('display');
@@ -179,7 +181,9 @@ async function clickSubmit() {
     let pageIncrement = pageInc(html , '+');
     html.setAttribute('data-type', pageIncrement);
 }
-
+/**
+ * function to add form fields
+ */
 function loadForm() {
     let insert = `
     <h2>Country/City Selector</h2>
@@ -209,6 +213,9 @@ function loadForm() {
     html.setAttribute('data-type', '1')
 }
 
+/**
+ * function to add html code for 5 daily prayers and start clock
+ */
 function loadResults() {
     let insert = `
     <h3><span id="clock"></span></h3>
@@ -263,9 +270,6 @@ function previousPage() {
     } else if (pageIncrement == 1){
         clickByCity();
     }
-
-    //html.setAttribute('data-type', pageIncrement);
-
 }
 /**
  * Load the index main html code
@@ -383,7 +387,11 @@ function insertTimer(){
         timerHTML(0,element);
     }
 }
-
+/**
+ * function to add html code for timer
+ * @param {*} index parameter for prayer index array
+ * @param {*} element array of all active prayers
+ */
 function timerHTML(index, element) {
     if (element[index].children.length < 4 ) {
         element[index].innerHTML += `
@@ -400,6 +408,9 @@ function timerHTML(index, element) {
     }
 }
 
+/**
+ * function to update timer every second
+ */
 function updateTimer() {
     const element = document.getElementsByClassName('timer');
     let check = document.getElementsByClassName('prayers active')
@@ -423,9 +434,8 @@ function updateTimer() {
         document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`);
         document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
     }
-
-
 }
+
  /**
   * Function to return value for number less than 10 with leading zero
   * @param {*} i 
