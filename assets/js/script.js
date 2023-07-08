@@ -363,6 +363,9 @@ function changeActive(time){
             
         }
     }
+    if (document.getElementsByClassName('timer').length > 1) {
+        document.getElementsByClassName('timer')[1].remove();
+    }
 
 }
 /**
@@ -370,7 +373,8 @@ function changeActive(time){
  */
 function insertTimer(){
     let element = document.getElementsByClassName('prayers active');
-    if(element.length === 5 && element[element.length - 1].children.length < 4) {
+    let fajrPassed = timeDifference(document.getElementById('clock').innerHTML, document.getElementsByClassName('prayers')[0].getElementsByClassName('active')[0].innerHTML, '00:00');
+    if(fajrPassed > 0 && element[element.length - 1].children.length < 4) {
         element[element.length - 1].innerHTML += `
         <div class="timer">
             <div class ="percent" style="--num:1;">
@@ -382,7 +386,7 @@ function insertTimer(){
                 </div>
             </div>
         </div>`;
-    }else if (element[0].children.length < 4 && document.getElementsByClassName('prayers active').length < 5){
+    }else if (element[0].children.length < 4 ){
         element[0].innerHTML += `
         <div class="timer">
             <div class ="percent" style="--num:1;">
