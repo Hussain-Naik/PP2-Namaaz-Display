@@ -420,6 +420,8 @@ function updateTimer() {
         let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].parentElement.getAttribute('data-type'), '00:00');
         let limit = timeDifference(element[0].parentElement.getElementsByClassName('active')[0].innerHTML, element[0].parentElement.getAttribute('data-type'), '00:00');
         let percentage = Math.floor(timer / limit * 100);
+        timer = timeDifference(document.getElementById('clock').innerHTML, element[0].parentElement.getElementsByClassName('active')[0].innerHTML, '00:00') > 0 ? 0 : timer;
+        percentage = timer == 0 ? 100 : percentage;
         document.getElementsByClassName('percent')[0].setAttribute('style', `--num:${percentage}`);
         document.getElementsByClassName('countdown')[0].innerHTML = `<h4>${convertToTime(timer)}</h4>`;
     }
