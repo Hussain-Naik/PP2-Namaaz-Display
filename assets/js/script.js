@@ -337,8 +337,11 @@ function startTime() {
     if (document.getElementsByClassName('prayer').length > 0 ) {
         changeActive(h + ":" + m + ":" + s)
         setTimeout(startTime, 1000);
-        insertTimer();
-        updateTimer();
+        if (document.getElementsByClassName('fa-solid').length == 0) {
+            insertTimer();
+            updateTimer();
+        }
+        
         clock.innerHTML = h + ":" + m + ":" + s;
     }
     else {
@@ -374,22 +377,18 @@ function changeActive(time){
 function insertTimer(){
     let element = document.getElementsByClassName('prayers active');
     let fajrPassed = timeDifference(document.getElementById('clock').innerHTML, document.getElementsByClassName('prayers')[0].getElementsByClassName('active')[0].innerHTML, '00:00');
-    if(fajrPassed > 0 && element[element.length - 1].children.length < 4) {
-        element[element.length - 1].innerHTML += `
+    if(fajrPassed > 0 ) {
+        timerHTML(4,element);
+    }else {
+        timerHTML(0,element);
+    }
+}
+
+function timerHTML(index, element) {
+    if (element[index].children.length < 4 ) {
+        element[index].innerHTML += `
         <div class="timer">
-            <div class ="percent" style="--num:1;">
-                <svg>
-                    <circle cx="40" cy="40" r="38"></circle>
-                    <circle cx="40" cy="40" r="38"></circle>
-                </svg>
-                <div class="countdown">
-                </div>
-            </div>
-        </div>`;
-    }else if (element[0].children.length < 4 ){
-        element[0].innerHTML += `
-        <div class="timer">
-            <div class ="percent" style="--num:1;">
+            <div class ="percent" style="--num:100;">
                 <svg>
                     <circle cx="40" cy="40" r="38"></circle>
                     <circle cx="40" cy="40" r="38"></circle>
