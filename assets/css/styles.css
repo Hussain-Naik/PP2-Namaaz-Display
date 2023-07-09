@@ -187,6 +187,7 @@ h3 {
     width: 80%;
     font-family: Roboto, sans-serif;
     text-transform: uppercase;
+    color: var(--color2);
 
 }
 .frm-display input {
