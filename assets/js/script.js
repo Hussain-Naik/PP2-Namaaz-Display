@@ -343,7 +343,7 @@ function startTime() {
         
         setTimeout(startTime, 1000);
         if (document.getElementsByClassName('fa-solid').length == 0) {
-            changeActive(h + ":" + m + ":" + s); 
+            changeActive(h + ":" + m + ":" + s);
         }
         
         clock.innerHTML = h + ":" + m + ":" + s;
