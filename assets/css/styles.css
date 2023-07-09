@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -49,6 +50,13 @@ h3 {
     text-align: center;
     margin: 0;
     padding: .2rem;
+}
+
+#logo {
+    color: #C3B367;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.75rem;
 }
 
 .btn-box {
@@ -124,7 +132,7 @@ h3 {
     padding: .1rem 0;
     margin: 0;
     text-align: center;
-    color: var(--color1);
+    color: var(--color2);
     background-color: inherit;
 }
 
@@ -133,7 +141,7 @@ h3 {
     padding: .1rem 0;
     margin: 0;
     text-align: center;
-    color: var(--color1);
+    color: var(--color2);
     background-color: inherit;
     
 }
