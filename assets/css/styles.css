@@ -23,7 +23,7 @@ body {
     background-color: black;
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 40rem;
     background-position-x: center;
     background-position-y: top;
 }
