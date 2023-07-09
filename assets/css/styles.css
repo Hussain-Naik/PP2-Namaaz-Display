@@ -195,6 +195,10 @@ h3 {
     font-family: Oxygen, sans-serif;
     text-transform: uppercase;
     margin-bottom: .4rem;
+    padding-left: .2rem;
+}
+.frm-display input:focus-visible {
+    outline: var(--color3) auto 1px;
 }
 
 .timer {
