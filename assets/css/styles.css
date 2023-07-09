@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@300&display=swap');
 
 :root {
-    --color1: #1F271B;
+    --color1: #20232f;
     --color2: #F3FCF0;
     --color3: #C3B367;
     --num1: 239;
@@ -112,7 +112,7 @@ h3 {
     align-items: center;
     width: calc(100% - 1rem);
     position: relative;
-    border: #1F271B .4rem solid;
+    border: var(--color1) .4rem solid;
     border-radius: .75rem;
     opacity: .8;
 }
