@@ -137,7 +137,7 @@ function clickByLocation() {
     }
 
     const error = () => {
-        console.log('error');
+        previousPage();
     }
     navigator.geolocation.getCurrentPosition(success, error);
     let pageIncrement = pageInc(html , '+');
@@ -176,7 +176,7 @@ async function clickSubmit() {
 
         populateData(data1, data2, city);       
     } catch (error) {
-        console.log(error);
+        previousPage();
     }
     let pageIncrement = pageInc(html , '+');
     html.setAttribute('data-type', pageIncrement);
