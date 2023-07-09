@@ -3,7 +3,7 @@
 :root {
     --color1: #1F271B;
     --color2: #F3FCF0;
-    --color3: #5A9367;
+    --color3: #C3B367;
     --num1: 239;
 }
 
@@ -16,8 +16,15 @@
 body {
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    height: 100vh;
+    background-color: black;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
 }
 
 h1, h2, h3 {
