@@ -53,11 +53,13 @@ async function clickByCity() {
             let res = await fetch(`http://api.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
             let data = await res.json();
             let citySelect = document.getElementById('cities');
+            document.getElementById('city').setAttribute('placeholder','Select City from list')
             data.geonames.forEach(city => {
                 let option = document.createElement('option');
                 option.value = city.name;
                 citySelect.appendChild(option);
-            });
+            })
+            ;
             
         })
     } catch (error) {
@@ -137,7 +139,7 @@ function clickByLocation() {
     }
 
     const error = () => {
-        previousPage();
+        errorPage('NGL');
     }
     navigator.geolocation.getCurrentPosition(success, error);
     let pageIncrement = pageInc(html , '+');
@@ -189,11 +191,11 @@ function loadForm() {
     <h2>Country/City Selector</h2>
     <form action="response.html" method="GET" class="frm-display">
         <label for="country">Country:</label>
-        <input list="countries" id="country" name="country">
+        <input list="countries" id="country" name="country" placeholder="Select Country from List">
         <datalist id="countries">
         </datalist>
         <label for="city">City:</label>
-        <input list="cities" id="city" name="city">
+        <input list="cities" id="city" name="city" placeholder="">
         <datalist id="cities">
         </datalist>
     </form>
@@ -512,7 +514,20 @@ function errorPage(type) {
 }
 
 function noGeoLocation() {
+    let insert = `
+    <h2>Error</h2>
+    <div class="frm-display">
+        <p>No GeoLocation was provided. Please allow application to use current location when promted.</p>
+    </div>
+    <div class="btn-box">
+        <div class="btn button" data-type="back">
+            <span>Back</span>
+        </div>
+    </div>`;
+    let html = document.getElementById('display');
+    html.innerHTML = insert;
 
+    html.setAttribute('data-type', '1')
 }
 
 function inputValidation() {
