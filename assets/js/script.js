@@ -121,9 +121,9 @@ function clickByLocation() {
             let nextDate = new Date();
             nextDate.setDate(currentDate.getDate() + 1);
 
-            let res = await fetch(`http://api.aladhan.com/v1/timings/${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
+            let res = await fetch(`http://api.aladhan.com/v1/timings/${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data1 = await res.json();
-            res = await fetch(`http://api.aladhan.com/v1/timings/${nextDate.getDate()}-${nextDate.getMonth()}-${nextDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
+            res = await fetch(`http://api.aladhan.com/v1/timings/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data2 = await res.json();
             
             console.log(data1);
@@ -166,9 +166,9 @@ async function clickSubmit() {
         let nextDate = new Date();
         nextDate.setDate(currentDate.getDate() + 1);
 
-        let res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${currentDate.getDate()}-${currentDate.getMonth()}-${currentDate.getFullYear()}?city=${city}&country=${country}&method=15`);
+        let res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}?city=${city}&country=${country}&method=15`);
         let data1 = await res.json();
-        res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${nextDate.getDate()}-${nextDate.getMonth()}-${nextDate.getFullYear()}?city=${city}&country=${country}&method=15`);
+        res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?city=${city}&country=${country}&method=15`);
         let data2 = await res.json();
         
         console.log(data1);
