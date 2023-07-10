@@ -63,7 +63,7 @@ async function clickByCity() {
             
         })
     } catch (error) {
-        console.log(error);
+        errorPage(error);
     }
 }
 
@@ -134,7 +134,7 @@ function clickByLocation() {
     
             populateData(data1, data2, pos);
         } catch (error) {
-            console.log(error);
+            errorPage(error);
         }
     }
 
@@ -534,5 +534,19 @@ function inputValidation() {
 
 }
 function errorMisc() {
+    let insert = `
+    <h2>Its not You - Unexpected Error</h2>
+    <div class="frm-display">
+        <p>Sorry something has gone wrong with your reqeust, our team are working to resolve this issue. We adivse trying again later</p>
+    </div>
+    <div class="btn-box">
+        <div class="btn button" data-type="back">
+            <span>Back</span>
+        </div>
+    </div>`;
+    let html = document.getElementById('display');
+    html.innerHTML = insert;
 
+    let pageIncrement = pageInc(html , '+');
+    html.setAttribute('data-type', pageIncrement);
 }
