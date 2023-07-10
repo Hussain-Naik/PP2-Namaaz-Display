@@ -500,3 +500,24 @@ function convertToTime(seconds) {
     }
     return h + ':' + m + ':' + s;
 }
+
+function errorPage(type) {
+    if (type == 'NGL'){
+        noGeoLocation();
+    } else if (type == 'IVR') {
+        inputValidation();
+    } else {
+        errorMisc();
+    }
+}
+
+function noGeoLocation() {
+
+}
+
+function inputValidation() {
+
+}
+function errorMisc() {
+
+}
