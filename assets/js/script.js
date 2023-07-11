@@ -178,7 +178,7 @@ async function clickSubmit() {
 
         populateData(data1, data2, city);       
     } catch (error) {
-        previousPage();
+        errorPage(error);
     }
     let pageIncrement = pageInc(html , '+');
     html.setAttribute('data-type', pageIncrement);
@@ -506,10 +506,8 @@ function convertToTime(seconds) {
 function errorPage(type) {
     if (type == 'NGL'){
         noGeoLocation();
-    } else if (type == 'IVR') {
-        inputValidation();
     } else {
-        errorMisc();
+        defaultError();
     }
 }
 
@@ -530,10 +528,7 @@ function noGeoLocation() {
     html.setAttribute('data-type', '1')
 }
 
-function inputValidation() {
-
-}
-function errorMisc() {
+function defaultError() {
     let insert = `
     <h2>Its not You - Unexpected Error</h2>
     <div class="frm-display">
