@@ -541,7 +541,4 @@ function defaultError() {
     </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
-
-    let pageIncrement = pageInc(html , '+');
-    html.setAttribute('data-type', pageIncrement);
 }
