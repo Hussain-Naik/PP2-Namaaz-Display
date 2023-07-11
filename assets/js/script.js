@@ -95,7 +95,7 @@ function populateData(data1, data2, location) {
     prayers[3].setAttribute('data-type', data1.data.timings.Isha);
     //set isha
     element[8].innerHTML = data1.data.timings.Isha;
-    prayers[4].setAttribute('data-type', data1.data.timings.Fajr);
+    prayers[4].setAttribute('data-type', data1.data.timings.Midnight);
     //set fajr next day
     element[1].innerHTML = data2.data.timings.Fajr;
     //set zohar next day
