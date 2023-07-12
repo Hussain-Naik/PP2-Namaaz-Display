@@ -202,6 +202,10 @@ h3 {
     margin-bottom: .4rem;
     padding-left: .2rem;
 }
+.frm-display label.required {
+    color: red;
+}
+
 .frm-display input:focus-visible {
     outline: var(--color3) auto 1px;
 }
