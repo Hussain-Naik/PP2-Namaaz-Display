@@ -156,10 +156,14 @@ function clickByLocation() {
  */
 async function clickSubmit() {
     let html = document.getElementById('display');
-    let city = document.getElementById('city').value;
-    let country = document.getElementById('country').value;
+    let input = document.getElementsByTagName('input');
+    let city = input[0].value;
+    let country = input[1].value;
     console.log(city);
     console.log(country);
+    if (city === '' || country === '') {
+        return formValidation(input);
+    }
     loadResults();
 
     try {
@@ -527,7 +531,15 @@ function noGeoLocation() {
 
     html.setAttribute('data-type', '1')
 }
+function formValidation(input) {
+    for (i=0 ; i < input.length ; i++) {
+        if(input[i].value === ''){
+            document.getElementsByTagName('label')[i].textContent = `** ${input[i].getAttribute('id')} is required **`;
+            document.getElementsByTagName('label')[i].classList.add('required');
+        }
+    }
 
+}
 function defaultError() {
     let insert = `
     <h2>Its not You - Unexpected Error</h2>
