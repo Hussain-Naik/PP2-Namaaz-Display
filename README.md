@@ -31,6 +31,7 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 - [GitHub](https://github.com/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Balsamiq Wireframes](https://balsamiq.com/)
+- [Postman](https://en.wikipedia.org/wiki/Postman_(software))
 
 ---
 ## Design
