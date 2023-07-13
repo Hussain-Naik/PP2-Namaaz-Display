@@ -60,8 +60,8 @@ The [Namaaz Display](https://hussain-naik.github.io/PP1-Namaaz Display/) website
 ### Typography
 
 - Google Fonts
-    - [Arimo](https://fonts.google.com/specimen/Arimo?query=arimo) - used for heading and logo
-    - [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins) - used for remaing body text
+    - [Oxygen](https://fonts.google.com/specimen/Oxygen?query=oxygen) - used for heading and logo
+    - [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto) - used for remaing body text
 
 ---
 ## Features
