@@ -162,6 +162,11 @@ Each device tested the site using the following browsers:
 ---
 ## Future Improvements
 
+- Add a digital clock font to time.
+- Add feature for hanafii school prayer times as they differ slightly.
+- Add refresh to results at midnight to retrive new data.
+- Add reverse geolocation to display user city rather than coordinates.
+- Add addional information for islamic relevance dates.
 
 ---
 ## Credits
