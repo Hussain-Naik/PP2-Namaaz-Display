@@ -1,39 +1,172 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Namaaz Display
+![Namaaz Display](documentation/responsive-display.png)
 
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The [Namaaz Display](https://hussain-naik.github.io/PP1-Namaaz Display/) website allows people to find namaaz times for a given city location or gps coordinates. The website also displays a timer for time remaing to perform current prayer.
 
 ---
+## User stories
 
-Happy coding!
+### First time visitor goals
+- I want to know what time each islamic prayer is
+- I want the site Responsive on my device
+- I want the site to be easy to navigate
+
+### Returning visitor goals
+- I want to know how long remaining for current prayer
+
+### Frequent visitor goals
+- I want to know prayer times in different cities
+- I want to know next day prayer times to avoid missing my prayers
+
+---
+## Technologies Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css)
+- [Font Awesome icons](https://fontawesome.com/)
+- [Google fonts](https://fonts.google.com/)
+- [VSCode](https://code.visualstudio.com/)
+- [Canva](https://www.canva.com/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Balsamiq Wireframes](https://balsamiq.com/)
+
+---
+## Design
+
+### Wireframe
+
+- Index Page Mockup
+![Index Page](documentation/desktop-wireframe.png)
+
+
+### Color Scheme
+
+![color-palette](documentation/color-palette.png)
+- Main color 60% of site #F6F8FF Ghost White
+- Secondary color 30% of site #50453F Taupe
+- Action Color 10% of site #7BAE7F Cambridge blue
+
+### Typography
+
+- Google Fonts
+    - [Arimo](https://fonts.google.com/specimen/Arimo?query=arimo) - used for heading and logo
+    - [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins) - used for remaing body text
+
+---
+## Features
+
+
+---
+## Testing
+
+### Full Testing
+
+Full testing was performed on the following devices:
+
+- Decktop:
+  - Mac Mini 2014
+- Mobile Devices:
+  * iPhone SE (3rd Gen).
+  * iPhone X
+
+
+Each device tested the site using the following browsers:
+
+* Google Chrome
+* Safari
+* Firefox
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| Home link | Link directs the user back to the home page | Clicked link | Home page reloads | Pass |
+| About Us link | Link scrolls to about us section on home page | Clicked link | page scrolls down until about us section | Pass |
+| Events link | Link scrolls to events section on home page | Clicked link | page scrolls down until events section | Pass |
+| Prayer Times link | Link directs the user to Prayer Times page | Clicked link | Prayer Times Page loads | Pass |
+| Contact Us link | Link directs the user to Contact page | Clicked link | Contact Page loads | Pass |
+| Get in Touch button | Link directs the user to Contact page | Clicked button | Contact Page loads | Pass |
+| Facebook icon | Link directs the user to Facebook site | Clicked link | Facebook opens in new tab | Pass |
+| Twitter icon | Link directs the user to Twitter site | Clicked link | Twitter opens in new tab | Pass |
+| Youtube icon | Link directs the user to Youtube site | Clicked link | Youtube opens in new tab | Pass |
+| Instagram icon | Link directs the user to Instagram site | Clicked link | Instagram opens in new tab | Pass |
+| All Link - hover effect | Animation of green underline when hovered | Hover over all links on page | Each link displayed correct styling when hovered over | Pass |
+
+
+---
+## Bugs
+
+### Solved Bugs
+
+- Navigation logo too large was set with fixed width
+    - Solved by removing width on logo and setting hr background color to fill remaining navigation
+
+- Redirect not working on response page
+    - Solved by adding index file path to url.
+
+- Home contact section chat image background
+    - Changed to img and wrapped left and right class in new div with 100% width and display flex
+
+- Contact form textarea resizable
+    - Added CSS rule to only resize vertically and added max height to input
+
+### Unsolved Bugs
+
+- None
+
+### Mistakes
+
+- Commit without Add Prefix
+
+---
+## Validator Testing
+
+### HTML Validator
+
+- Home Page no errors or warnings were found when passing through the official W3C validator.
+![Home Page](documentation/index-validator.png)
+
+### CSS Validator
+
+- No errors or warnings were found when passing through the official W3C (Jigsaw)
+![css](documentation/css-validator.png)
+
+### JavaScript Validator
+
+- No errors or warnings were found when passing through the official W3C (Jigsaw)
+![javascript](documentation/css-validator.png)
+
+### Lighthouse Accessibility and Performance
+
+- Home Page using lighthouse in devtools I confirmed that the page is performing well, accessible and colors and fonts chosen are readable.
+![Home Page](documentation/home-lighthouse.png)
+
+---
+## Deployment
+
+- The website was deployed to GitHub pages and can be accessed by the link: [Namaaz Display](https://hussain-naik.github.io/PP1-Namaaz Display/)
+
+- In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/Hussain-Naik/PP1-Namaaz Display.git`
+---
+## Future Improvements
+
+
+---
+## Credits
+
+- All images are taken from [unsplash](https://unsplash.com/), [pixabay](https://pixabay.com/) and [freepik](https://www.freepik.com/) website or created using [canva]().
+- favicon was made using [faviconer.com](http://www.faviconer.com/).
+
+---
+## Acknowledgments
+
+- Due to the nature of the project the first form of acknowledegement is to Allah with the common islamic phrase Alhamdulillah (roughly equivalent to "thank God". Literally it means "all praise is to God")
+- [Aleksei Konovalov](https://github.com/lexach91) great guidance and mentor throughout project
+- [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
+- [Kevin Powell](https://www.youtube.com/user/KepowOb) Flex display tutorials.
+- [Coding Artist](https://www.youtube.com/@CodingArtist) CSS hover animation tutorial.
+
+---
