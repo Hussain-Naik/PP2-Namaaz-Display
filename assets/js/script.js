@@ -204,12 +204,12 @@ function loadForm() {
         </datalist>
     </form>
     <div class="btn-box">
-        <div class="btn button" data-type="back">
+        <div class="btn button" data-type="back" aria-label="Button to go back to previous page">
             <span>Back</span>
         </div>
     </div>
     <div class="btn-box">
-        <div class="btn button" data-type="submit">
+        <div class="btn button" data-type="submit" aria-label="Button to display prayer details for selected city">
             <span>Submit</span>
         </div>
     </div>`;
@@ -255,7 +255,7 @@ function loadResults() {
         </div>
     </div>
     <div class="btn-box">
-        <div class="btn button" data-type="back">
+        <div class="btn button" data-type="back" aria-label="Button to go back to previous page">
             <span>Back</span>
         </div>
     </div>`;
@@ -284,12 +284,12 @@ function previousPage() {
 function indexPage() {
     let insert = `<h2>Display Prayer Times</h2>
     <div class="btn-box">
-        <div class="btn button" data-type="city">
+        <div class="btn button" data-type="city" aria-label="Button to go to City selection option">
             <span>By City</span>
         </div>
     </div>
     <div class="btn-box">
-        <div class="btn button" data-type="location">
+        <div class="btn button" data-type="location" aria-label="Button to get prayer details with user GPS Location">
             <span>By Location</span>
         </div>
     </div>`;
@@ -522,7 +522,7 @@ function noGeoLocation() {
         <p>No GeoLocation was provided. Please allow application to use current location when promted.</p>
     </div>
     <div class="btn-box">
-        <div class="btn button" data-type="back">
+        <div class="btn button" data-type="back" aria-label="Button to go back to previous page">
             <span>Back</span>
         </div>
     </div>`;
@@ -547,7 +547,7 @@ function defaultError() {
         <p>Sorry something has gone wrong with your reqeust, our team are working to resolve this issue. We adivse trying again later</p>
     </div>
     <div class="btn-box">
-        <div class="btn button" data-type="back">
+        <div class="btn button" data-type="back" aria-label="Button to go back to previous page">
             <span>Back</span>
         </div>
     </div>`;
