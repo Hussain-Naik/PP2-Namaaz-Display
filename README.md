@@ -182,5 +182,7 @@ Each device tested the site using the following browsers:
 - [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
 - [Kevin Powell](https://www.youtube.com/user/KepowOb) Flex display tutorials.
 - [Coding Artist](https://www.youtube.com/@CodingArtist) CSS hover animation tutorial.
+- [David Fekke](https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/) Documentation on Dom chnages without a javascript framework.
+- [Muhammad Irshad - Online Tutorials](https://www.youtube.com/@OnlineTutorialsYT) tutorial on how to make animated circular timer.
 
 ---
