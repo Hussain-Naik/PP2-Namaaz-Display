@@ -134,12 +134,12 @@ Each device tested the site using the following browsers:
 ### HTML Validator
 
 - Home Page no errors or warnings were found when passing through the official W3C validator.
-![Home Page](documentation/index-validator.png)
+![Home Page](documentation/html-validation.png)
 
 ### CSS Validator
 
 - No errors or warnings were found when passing through the official W3C (Jigsaw)
-![css](documentation/css-validator.png)
+![css](documentation/css-validation.png)
 
 ### JavaScript Validator
 
