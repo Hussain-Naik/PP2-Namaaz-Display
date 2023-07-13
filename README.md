@@ -38,7 +38,7 @@ The [Namaaz Display](https://hussain-naik.github.io/PP1-Namaaz Display/) website
 ### Wireframe
 
 - Index Page Mockup
-![Index Page](documentation/desktop-wireframe.png)
+![Index Page](documentation/index-wireframe.png.png)
 
 
 ### Color Scheme
