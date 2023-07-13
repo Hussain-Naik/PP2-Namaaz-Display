@@ -108,17 +108,17 @@ Each device tested the site using the following browsers:
 
 ### Solved Bugs
 
-- Navigation logo too large was set with fixed width
-    - Solved by removing width on logo and setting hr background color to fill remaining navigation
+- Fix API month parameter
+    - javascript getMonth() returns value from 0-11, +1 to month value for current month
 
-- Redirect not working on response page
-    - Solved by adding index file path to url.
+- Timer countdown insert 
+    - Function to insert timer placed after if statement
 
-- Home contact section chat image background
-    - Changed to img and wrapped left and right class in new div with 100% width and display flex
+- Timer percentage
+    - Calculate correct precentage from remaining time left
 
-- Contact form textarea resizable
-    - Added CSS rule to only resize vertically and added max height to input
+- API fetch data for month unable to get next day when end of month
+    - Added two single date API reqeust for current and next day
 
 ### Unsolved Bugs
 
