@@ -38,7 +38,16 @@ The [Namaaz Display](https://hussain-naik.github.io/PP1-Namaaz Display/) website
 ### Wireframe
 
 - Index Page Mockup
-![Index Page](documentation/index-wireframe.png.png)
+![Index Page](documentation/index-wireframe.png)
+
+- City Form Selector Mockup
+![City Form Page](documentation/city-form-wireframe.png)
+
+- Results Page Mockup
+![Results Page](documentation/results-wireframe.png)
+
+- Error Page Mockup
+![Error Page](documentation/errors-wireframe.png)
 
 
 ### Color Scheme
