@@ -54,9 +54,10 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 ### Color Scheme
 
 ![color-palette](documentation/color-palette.png)
-- Main color 60% of site #F6F8FF Ghost White
-- Secondary color 30% of site #50453F Taupe
-- Action Color 10% of site #7BAE7F Cambridge blue
+- Main color 60% of site #20232F Raisin Black
+- Secondary color 30% of site #F3FCF0 Honeydew
+- Action Color 10% of site #C3B367 Ecru
+- Form Validation #FF0000 Red
 
 ### Typography
 
