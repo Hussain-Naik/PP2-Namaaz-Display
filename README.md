@@ -1,7 +1,7 @@
 # Namaaz Display
 ![Namaaz Display](documentation/responsive-display.png)
 
-The [Namaaz Display](https://hussain-naik.github.io/PP1-Namaaz Display/) website allows people to find namaaz times for a given city location or gps coordinates. The website also displays a timer for time remaing to perform current prayer.
+The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website allows people to find namaaz times for a given city location or gps coordinates. The website also displays a timer for time remaing to perform current prayer.
 
 ---
 ## User stories
@@ -154,11 +154,11 @@ Each device tested the site using the following browsers:
 ---
 ## Deployment
 
-- The website was deployed to GitHub pages and can be accessed by the link: [Namaaz Display](https://hussain-naik.github.io/PP1-Namaaz Display/)
+- The website was deployed to GitHub pages and can be accessed by the link: [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/)
 
 - In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
-- `git clone https://github.com/Hussain-Naik/PP1-Namaaz Display.git`
+- `git clone https://github.com/Hussain-Naik/PP2-Namaaz-Display.git`
 ---
 ## Future Improvements
 
