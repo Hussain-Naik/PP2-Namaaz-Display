@@ -38,7 +38,7 @@ async function clickByCity() {
     loadForm();
 
     try {
-        let res = await fetch(`https://api.geonames.org/countryInfoJSON?username=hussain_naik`);
+        let res = await fetch(`https://secure.geonames.org/countryInfoJSON?username=hussain_naik`);
         let data = await res.json();
         let countrySelect = document.getElementById('countries');
         data.geonames.forEach(country => {
@@ -50,7 +50,7 @@ async function clickByCity() {
 
         document.getElementById('country').addEventListener('change', async () => {
             let countryCode = document.getElementById('country').value;
-            let res = await fetch(`https://api.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
+            let res = await fetch(`https://secure.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
             let data = await res.json();
             let citySelect = document.getElementById('cities');
             document.getElementById('city').setAttribute('placeholder','Select City from list')
