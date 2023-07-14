@@ -38,7 +38,7 @@ async function clickByCity() {
     loadForm();
 
     try {
-        let res = await fetch(`http://api.geonames.org/countryInfoJSON?username=hussain_naik`);
+        let res = await fetch(`https://api.geonames.org/countryInfoJSON?username=hussain_naik`);
         let data = await res.json();
         let countrySelect = document.getElementById('countries');
         data.geonames.forEach(country => {
@@ -50,7 +50,7 @@ async function clickByCity() {
 
         document.getElementById('country').addEventListener('change', async () => {
             let countryCode = document.getElementById('country').value;
-            let res = await fetch(`http://api.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
+            let res = await fetch(`https://api.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
             let data = await res.json();
             let citySelect = document.getElementById('cities');
             document.getElementById('city').setAttribute('placeholder','Select City from list')
@@ -123,9 +123,9 @@ function clickByLocation() {
             let nextDate = new Date();
             nextDate.setDate(currentDate.getDate() + 1);
 
-            let res = await fetch(`http://api.aladhan.com/v1/timings/${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
+            let res = await fetch(`https://api.aladhan.com/v1/timings/${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data1 = await res.json();
-            res = await fetch(`http://api.aladhan.com/v1/timings/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
+            res = await fetch(`https://api.aladhan.com/v1/timings/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data2 = await res.json();
             
             console.log(data1);
@@ -172,9 +172,9 @@ async function clickSubmit() {
         let nextDate = new Date();
         nextDate.setDate(currentDate.getDate() + 1);
 
-        let res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}?city=${city}&country=${country}&method=15`);
+        let res = await fetch(`https://api.aladhan.com/v1/timingsByCity/${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}?city=${city}&country=${country}&method=15`);
         let data1 = await res.json();
-        res = await fetch(`http://api.aladhan.com/v1/timingsByCity/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?city=${city}&country=${country}&method=15`);
+        res = await fetch(`https://api.aladhan.com/v1/timingsByCity/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?city=${city}&country=${country}&method=15`);
         let data2 = await res.json();
         
         console.log(data1);
