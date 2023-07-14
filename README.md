@@ -122,6 +122,9 @@ Each device tested the site using the following browsers:
 - API fetch data for month unable to get next day when end of month
     - Added two single date API reqeust for current and next day
 
+- Delopyed API Request with GitHub
+    - Changed reqeust to https and add secure prefix for geonames.
+    
 ### Unsolved Bugs
 
 - None
