@@ -92,17 +92,27 @@ Each device tested the site using the following browsers:
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| Home link | Link directs the user back to the home page | Clicked link | Home page reloads | Pass |
-| About Us link | Link scrolls to about us section on home page | Clicked link | page scrolls down until about us section | Pass |
-| Events link | Link scrolls to events section on home page | Clicked link | page scrolls down until events section | Pass |
-| Prayer Times link | Link directs the user to Prayer Times page | Clicked link | Prayer Times Page loads | Pass |
-| Contact Us link | Link directs the user to Contact page | Clicked link | Contact Page loads | Pass |
-| Get in Touch button | Link directs the user to Contact page | Clicked button | Contact Page loads | Pass |
-| Facebook icon | Link directs the user to Facebook site | Clicked link | Facebook opens in new tab | Pass |
-| Twitter icon | Link directs the user to Twitter site | Clicked link | Twitter opens in new tab | Pass |
-| Youtube icon | Link directs the user to Youtube site | Clicked link | Youtube opens in new tab | Pass |
-| Instagram icon | Link directs the user to Instagram site | Clicked link | Instagram opens in new tab | Pass |
 | All Link - hover effect | Animation of green underline when hovered | Hover over all links on page | Each link displayed correct styling when hovered over | Pass |
+| Click By City | Display City Selection Form | Clicked By City | Display Form with Country and City Selection | Pass |
+| Click By Location (Allow location)| Load Prayers times for given location | Clicked By Location | Correct location prayer data displayed | Pass |
+| Click By Location (restrict location) | Error as Fetch request passed without location parameters | Clicked By Location without user location permission | Custom error displayed stating location permission required | Pass |
+| Click Back after By Location | Display Initial Landing Page | Clicked Back | Returned to Initial Display | Pass |
+| Click Back after By City | Display Initial Landing Page | Clicked Back | Returned to Initial Display | Pass |
+| Click Back after By Location Error | Display Initial Landing Page | Clicked Back | Returned to Initial Display | Pass |
+| Click Back after By City Error | Display Initial Landing Page | Clicked Back | Returned to Initial Display | Pass |
+| Populate City Selector based on Country | Data List input populated based on country | Selected Country | Cities Populated based on country | Pass |
+| Country List Dropdown | Users will see a drop-down list of the pre-defined options as they input data | Begin Typing in Country input | List displayed Country | Pass |
+| Assign Country code | Selecting Country from data list will assign Country Code to input field | Selected Country from list | Country Code displayed in input field | Pass |
+| City List Dropdown | Users will see a drop-down list of the pre-defined options as they input data | Begin Typing in City input | List displayed Cities | Pass |
+| Assign City to input | Selecting City from data list will assign City to input field | Selected a City from list | Chosen City displayed in input field | Pass |
+| Click Submit (Inputs Selected) | Load Prayers times for given city | Clicked Submit | Correct location prayer data displayed | Pass |
+| Click Submit (City Input Empty) | Required Input prompt user to select a City | Clicked Submit with city input empty | City Label changed colour to red requesting user to select | Pass |
+| Click Submit (Country Input Empty) | Required Input prompt user to select a Country | Clicked Submit with country input empty | Country Label colour changed to red requesting user to select | Pass |
+| Click Submit (Both Inputs Empty) | Required Inputs prompt user to select a Country and City | Clicked Submit with inputs empty|  Label colour changed to red requesting user input | Pass |
+| Click Submit (Country Input invalid) | Error as Fetch request passed with invalid parameters | Clicked Submit with invalid country | Custom error displayed with button to go back | Pass |
+| Click Back after Submit | Display Form City Selector | Clicked Back | Country/City Selector form displayed | Pass |
+| Click Back after Submit Error | Display Form City Selector | Clicked Back | Country/City Selector form displayed | Pass |
+
 
 
 ---
