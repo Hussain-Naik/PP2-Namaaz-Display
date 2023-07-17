@@ -67,6 +67,7 @@ h3 {
 .btn-box {
     width: 25%;
     min-width: 200px;
+    max-width: 250px;
     margin: .75rem auto;
 }
 .btn {
@@ -96,6 +97,7 @@ h3 {
 
 .btn span:hover::after {
     width: 100%;
+    background-color: var(--textBGColor);
 }
 
 .center {
