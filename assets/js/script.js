@@ -51,7 +51,7 @@ async function clickByCity() {
             let res = await fetch(`https://secure.geonames.org/searchJSON?country=${countryCode}&maxRows=1000&username=hussain_naik&featureClass=P&style=short`);
             let data = await res.json();
             let citySelect = document.getElementById('cities');
-            document.getElementById('city').setAttribute('placeholder','Select City from list')
+            document.getElementById('city').setAttribute('placeholder','Select City from list');
             data.geonames.forEach(city => {
                 let option = document.createElement('option');
                 option.value = city.name;
@@ -59,7 +59,7 @@ async function clickByCity() {
             })
             ;
             
-        })
+        });
     } catch (error) {
         errorPage(error);
     }
@@ -129,11 +129,11 @@ function clickByLocation() {
         } catch (error) {
             errorPage(error);
         }
-    }
+    };
 
     const error = () => {
         errorPage('NGL');
-    }
+    };
     navigator.geolocation.getCurrentPosition(success, error);
     let pageIncrement = pageInc(html , '+');
     html.setAttribute('data-type', pageIncrement);
@@ -203,7 +203,7 @@ function loadForm() {
     let html = document.getElementById('display');
     html.innerHTML = insert;
 
-    html.setAttribute('data-type', '1')
+    html.setAttribute('data-type', '1');
 }
 
 /**
@@ -285,7 +285,7 @@ function indexPage() {
     </div>`;
     let html = document.getElementById('display');
     html.innerHTML = insert;
-    html.setAttribute('data-type', '0')
+    html.setAttribute('data-type', '0');
 }
 /**
  * Function to increment or decrement the data-type
@@ -294,7 +294,7 @@ function indexPage() {
  * returns value to set data-type
  */
 function pageInc(page, inc) {
-    let pageIncrement = page.getAttribute('data-type')
+    let pageIncrement = page.getAttribute('data-type');
     if (inc === '+'){
         pageIncrement++;
     } else {
@@ -410,7 +410,7 @@ function timerHTML(index, element) {
  */
 function updateTimer() {
     const element = document.getElementsByClassName('timer');
-    let check = document.getElementsByClassName('prayers active')
+    let check = document.getElementsByClassName('prayers active');
     if (check.length > 1 && check.length < 5) {
         let timer = timeDifference(document.getElementById('clock').innerHTML, element[0].parentElement.getAttribute('data-type'), '00:00');
         let limit = timeDifference(element[0].parentElement.getElementsByClassName('active')[0].innerHTML, element[0].parentElement.getAttribute('data-type'), '00:00');
@@ -441,7 +441,7 @@ function updateTimer() {
   * @returns value of string with leading zero
   */  
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};
+    if (i < 10) {i = "0" + i;}
     return i;
 }
 
@@ -518,7 +518,7 @@ function noGeoLocation() {
     let html = document.getElementById('display');
     html.innerHTML = insert;
 
-    html.setAttribute('data-type', '1')
+    html.setAttribute('data-type', '1');
 }
 function formValidation(input) {
     for (i=0 ; i < input.length ; i++) {
