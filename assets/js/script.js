@@ -270,6 +270,9 @@ function previousPage() {
  */
 function indexPage() {
     let insert = `<h2>Display Prayer Times</h2>
+    <div class="frm-display">
+        <p>To view current prayer times for your given location click the "By Location" or view prayer timing for specific city by clicking "By City".</p>
+    </div>
     <div class="btn-box">
         <div class="btn button" data-type="city" aria-label="Button to go to City selection option">
             <span>By City</span>
