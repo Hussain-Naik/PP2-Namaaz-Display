@@ -180,7 +180,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    max-width: 300px;
+    max-width: 400px;
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -192,6 +192,7 @@ h3 {
 .frm-display p {
     width: 80%;
     color: var(--color2);
+    text-align: justify;
 
 }
 
