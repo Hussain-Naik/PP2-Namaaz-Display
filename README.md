@@ -7,16 +7,16 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 ## User stories
 
 ### First time visitor goals
-- I want to know what time each islamic prayer is
-- I want the site Responsive on my device
-- I want the site to be easy to navigate
+- As a first time visitor I want to know what time each islamic prayer is
+- As a first time visitor I want the site Responsive on my device
+- As a first time visitor I want the site to be easy to navigate
 
 ### Returning visitor goals
-- I want to know how long remaining for current prayer
+- As a returning visitor I want to know how long remaining for current prayer
 
 ### Frequent visitor goals
-- I want to know prayer times in different cities
-- I want to know next day prayer times to avoid missing my prayers
+- As a Frequent visitor I want to know prayer times in different cities
+- As a Frequent visitor I want to know next day prayer times to avoid missing my prayers
 
 ---
 ## Technologies Used
@@ -169,7 +169,13 @@ Each device tested the site using the following browsers:
 ---
 ## Deployment
 
-- The website was deployed to GitHub pages and can be accessed by the link: [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/)
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the [GitHub repository](https://github.com/Hussain-Naik/PP2-Namaaz-Display), navigate to the Settings tab 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://hussain-naik.github.io/PP2-Namaaz-Display)
+
 
 - In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
