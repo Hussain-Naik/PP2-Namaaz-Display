@@ -195,11 +195,11 @@ function loadForm() {
     <h2>Country/City Selector</h2>
     <form action="" method="GET" class="frm-display">
         <label for="country">Country:</label>
-        <input list="countries" id="country" name="country" placeholder="Select Country from List">
+        <input list="countries" id="country" name="country" placeholder="Select Country from List" aria-label="Dropdown list of countries">
         <datalist id="countries">
         </datalist>
         <label for="city">City:</label>
-        <input list="cities" id="city" name="city" placeholder="">
+        <input list="cities" id="city" name="city" placeholder="" aria-label="Dropdown list of cities">
         <datalist id="cities">
         </datalist>
     </form>
