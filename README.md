@@ -120,8 +120,8 @@ Each device tested the site using the following browsers:
 
 ### Solved Bugs
 
-- Fix API month parameter
-    - javascript getMonth() returns value from 0-11, +1 to month value for current month
+- Fix API month parameter as getMonth() getMonth() returns value from 0-11
+    - +1 to month value for current month
 
 - Timer countdown insert 
     - Function to insert timer placed after if statement
@@ -132,7 +132,7 @@ Each device tested the site using the following browsers:
 - API fetch data for month unable to get next day when end of month
     - Added two single date API reqeust for current and next day
 
-- Delopyed API Request with GitHub
+- API request failed due to GitHub sercurity
     - Changed reqeust to https and add secure prefix for geonames.
     
 ### Unsolved Bugs
