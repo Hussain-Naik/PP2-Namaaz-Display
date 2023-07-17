@@ -353,7 +353,7 @@ function startTime() {
  */
 function changeActive(time){
     let activePrayer = document.getElementsByClassName('prayers');
-    for (i = 0; i < activePrayer.length -1; i++) {
+    for (let i = 0; i < activePrayer.length -1; i++) {
         if (timeDifference(time, activePrayer[i].getAttribute('data-type'), '00:00') < 0 && activePrayer[i].children.length > 3){
             activePrayer[i].classList.remove('active');
             let elements = activePrayer[i].children;
@@ -521,7 +521,7 @@ function noGeoLocation() {
     html.setAttribute('data-type', '1');
 }
 function formValidation(input) {
-    for (i=0 ; i < input.length ; i++) {
+    for (let i = 0 ; i < input.length ; i++) {
         if(input[i].value === ''){
             document.getElementsByTagName('label')[i].textContent = `** ${input[i].getAttribute('id')} is required **`;
             document.getElementsByTagName('label')[i].classList.add('required');
