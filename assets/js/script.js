@@ -403,7 +403,7 @@ function insertTimer(){
 function timerHTML(index, element) {
     if (element[index].children.length < 4 ) {
         element[index].innerHTML += `
-        <div class="timer">
+        <div class="timer" title="A countdown timer to pray current prayer">
             <div class ="percent" style="--num:100;">
                 <svg>
                     <circle cx="40" cy="40" r="38"></circle>
