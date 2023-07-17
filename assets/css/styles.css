@@ -97,7 +97,6 @@ h3 {
 
 .btn span:hover::after {
     width: 100%;
-    background-color: var(--textBGColor);
 }
 
 .center {
@@ -176,6 +175,7 @@ h3 {
 
 .button:hover {
     cursor: pointer;
+    background-color: var(--textBGColor);
 }
 
 .frm-display {
