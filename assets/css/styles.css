@@ -262,3 +262,10 @@ h3 {
     left: 10px;
     color: var(--color2);
 }
+
+/* Media queries for differnet screen sizes*/
+@media (max-width: 900px) {
+    body {
+        background-size: cover;
+    }
+}
