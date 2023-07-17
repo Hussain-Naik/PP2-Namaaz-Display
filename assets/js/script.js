@@ -6,13 +6,11 @@ const divSection = document.querySelector('#display');
 const observer = new MutationObserver((mutationsList, observer) => {
     for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            console.log('A child node has been added or removed.');
             let buttons = document.getElementsByClassName("button");
             
 	        for (let button of buttons) {
 		        button.addEventListener("click", function() {
                     loadPage(this.getAttribute("data-type"));
-                    console.log(this.getAttribute("data-type"));
                 });
 	        }
         }
@@ -127,11 +125,6 @@ function clickByLocation() {
             let data1 = await res.json();
             res = await fetch(`https://api.aladhan.com/v1/timings/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&method=15`);
             let data2 = await res.json();
-            
-            console.log(data1);
-            console.log(data2);
-            //timing output
-    
             populateData(data1, data2, pos);
         } catch (error) {
             errorPage(error);
@@ -159,8 +152,6 @@ async function clickSubmit() {
     let input = document.getElementsByTagName('input');
     let city = input[0].value;
     let country = input[1].value;
-    console.log(city);
-    console.log(country);
     if (city === '' || country === '') {
         return formValidation(input);
     }
@@ -176,10 +167,6 @@ async function clickSubmit() {
         let data1 = await res.json();
         res = await fetch(`https://api.aladhan.com/v1/timingsByCity/${nextDate.getDate()}-${nextDate.getMonth() + 1}-${nextDate.getFullYear()}?city=${city}&country=${country}&method=15`);
         let data2 = await res.json();
-        
-        console.log(data1);
-        //timing output
-
         populateData(data1, data2, city);       
     } catch (error) {
         errorPage(error);
@@ -310,7 +297,6 @@ function pageInc(page, inc) {
     } else {
         pageIncrement--;
     }
-    console.log(pageIncrement);
     return pageIncrement;
 }
 /**
