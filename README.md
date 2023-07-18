@@ -67,14 +67,30 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 
 ---
 ## Features
-![Home Page](documentation/responsive-city-display.png)
-![Form](documentation/responsive-city-display.png)
-![Form Validation](documentation/responsive-validator-display.png)
-![Results](documentation/responsive-results-display.png)
-![No GeoLocation](documentation/responsive-error-display.png)
-![Fetch Error](documentation/responsive-error-fetch-display.png)
-![404 Error](documentation/responsive-404-display.png)
 
+### Home page
+![Home Page](documentation/responsive-city-display.png)
+The home page of website displays the sites name as a title and then a container which holds some information text, the title also acts as a link to return to the website landing page. Below this are two buttons, By City and By Location.
+### City Selector page
+![Form](documentation/responsive-city-display.png)
+The City Selector display inform the user to select a country and city to view prayer times in the selected city. There are two new button, Back and Submit.
+### Form Validation
+![Form Validation](documentation/responsive-validator-display.png)
+As the page is Javascript DOM Manipulate the form action has been disabled and a manualy javascript validation propmting the user to select options from the given dropdown. The Country and City Drop down use the geonames API to populate the options.
+### API Prayer Times
+![Results](documentation/responsive-results-display.png)
+The Prayer times result page displays the current device time with georgian date and islamic date. Each prayer start time is displayed and the current active prayer also displays a timer with a circular progress bar. The active prayer changes once the prayer end time has been passed. The prayers that have passed invert the colors and add opacity to remove focus and display pray start time for next day.
+### No Geolocation Error
+![No GeoLocation](documentation/responsive-error-display.png)
+When device location has been set to not allow a custom error will be displayed if the user clicked the By Location button on the landing page. User has option to click the Back button to go back to previous page or the title to return to home page
+
+### API Fetch Error
+![Fetch Error](documentation/responsive-error-fetch-display.png)
+A custom error message will be displayed if there was an incorrect option selected or error in the API fetch. User has option to click the Back button to go back to previous page or the title to return to home page
+
+### Custom 404 page
+![404 Error](documentation/responsive-404-display.png)
+Custom 404 error page set with links to index page. The title and addional button both return the user back to main landing page.
 ---
 ## Testing
 
