@@ -1,6 +1,6 @@
 //Use MutationObserve to update added html buttons
 //https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/
-
+const urlCheck = window.location.pathname;
 const divSection = document.querySelector('#display');
 
 const observer = new MutationObserver((mutationsList, observer) => {
@@ -26,9 +26,8 @@ observer.observe(divSection, {
 // Wait for the DOM to finish loading before loading initial page
 
 document.addEventListener("DOMContentLoaded", function() {
-	let urlCheck = window.Location.pathname;
     console.log(urlCheck);
-    if (urlCheck == '/PP2-Namaaz-Display/'){
+    if (urlCheck == '/PP2-Namaaz-Display/' || urlCheck == '/index.html'){
         loadPage('index');
     } else {
         custom404Page();
