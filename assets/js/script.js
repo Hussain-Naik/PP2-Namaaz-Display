@@ -1,6 +1,5 @@
 //Use MutationObserve to update added html buttons
 //https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/
-const urlCheck = window.location.pathname;
 const divSection = document.querySelector('#display');
 
 const observer = new MutationObserver((mutationsList, observer) => {
@@ -26,12 +25,7 @@ observer.observe(divSection, {
 // Wait for the DOM to finish loading before loading initial page
 
 document.addEventListener("DOMContentLoaded", function() {
-    console.log(urlCheck);
-    if (urlCheck == '/PP2-Namaaz-Display/' || urlCheck == '/index.html'){
-        loadPage('index');
-    } else {
-        custom404Page();
-    }
+    loadPage('index');
 });
 /**
  * Load increment display data-type by 1 and call loadForm
@@ -268,25 +262,6 @@ function previousPage() {
     } else if (pageIncrement == 1){
         clickByCity();
     }
-}
-
-/**
- * Load custom 404 error html code
- * Set page increment data-type to 0
- */
-function custom404Page() {
-    let insert = `<h2>404 Error</h2>
-    <div class="frm-display">
-        <p>To view current prayer times for your given location click the "By Location" or view prayer timing for specific city by clicking "By City".</p>
-    </div>
-    <div class="btn-box">
-        <div class="btn button" data-type="back" aria-label="Button to go back to previous page">
-            <span>Back</span>
-        </div>
-    </div>`;
-    let html = document.getElementById('display');
-    html.innerHTML = insert;
-    html.setAttribute('data-type', '1');
 }
 /**
  * Load the index main html code
