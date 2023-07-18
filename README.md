@@ -129,10 +129,10 @@ Each device tested the site using the following browsers:
 - Fix API month parameter as getMonth() returns value from 0-11
     - +1 to month value for current month
 
-- Timer countdown insert 
-    - Function to insert timer placed after if statement
+- Timer countdown was inserted for each prayer
+    - Function to insert timer placed after if statement and removed first timer sibling
 
-- Timer percentage
+- Timer percentage need to convert current time to seconds to compare and calculte percentage
     - Calculate correct precentage from remaining time left
 
 - API fetch data for month unable to get next day when end of month
