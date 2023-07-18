@@ -263,6 +263,24 @@ h3 {
     color: var(--color2);
 }
 
+.error {
+    max-width: 300px;
+    background-color: var(--textBGColor);
+    margin: auto;
+    padding: 1rem;
+}
+
+.error > * {
+    background-color: transparent;
+}
+
+.error h3 {
+    font-size: 1rem;
+}
+
+.error h2 {
+    font-size: 2rem;
+}
 /* Media queries for differnet screen sizes*/
 @media (max-width: 900px) {
     body {
