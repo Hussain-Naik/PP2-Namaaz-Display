@@ -27,6 +27,7 @@ observer.observe(divSection, {
 
 document.addEventListener("DOMContentLoaded", function() {
 	let urlCheck = window.Location.pathname;
+    console.log(urlCheck);
     if (urlCheck == '/PP2-Namaaz-Display/'){
         loadPage('index');
     } else {
