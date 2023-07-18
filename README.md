@@ -67,13 +67,13 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 
 ---
 ## Features
-![Home Page](documentation/home-lighthouse.png)
-![Home Page](documentation/home-lighthouse.png)
-![Home Page](documentation/home-lighthouse.png)
-![Home Page](documentation/home-lighthouse.png)
-![Home Page](documentation/home-lighthouse.png)
-![Home Page](documentation/home-lighthouse.png)
-![Home Page](documentation/home-lighthouse.png)
+![Home Page](documentation/responsive-city-display.png)
+![Form](documentation/responsive-city-display.png)
+![Form Validation](documentation/responsive-validator-display.png)
+![Results](documentation/responsive-results-display.png)
+![No GeoLocation](documentation/responsive-error-display.png)
+![Fetch Error](documentation/responsive-error-fetch-display.png)
+![404 Error](documentation/responsive-404-display.png)
 
 ---
 ## Testing
