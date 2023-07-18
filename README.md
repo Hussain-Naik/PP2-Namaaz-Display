@@ -142,6 +142,7 @@ Each device tested the site using the following browsers:
 ### Mistakes
 
 - Commit without Add Prefix
+![mistake](documentation/git-mistake.png)
 
 ---
 ## Validator Testing
