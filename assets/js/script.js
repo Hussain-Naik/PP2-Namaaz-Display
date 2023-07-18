@@ -180,6 +180,7 @@ function loadForm() {
     let insert = `
     <h2>Country/City Selector</h2>
     <form action="" method="GET" class="frm-display">
+        <p>To view prayer times in desried City please select Country then City.</p>
         <label for="country">Country:</label>
         <input list="countries" id="country" name="country" placeholder="Select Country from List" aria-label="Dropdown list of countries">
         <datalist id="countries">
