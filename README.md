@@ -69,7 +69,7 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 ## Features
 
 ### Home page
-![Home Page](documentation/responsive-city-display.png)
+![Home Page](documentation/responsive-display.png)
 The home page of website displays the sites name as a title and then a container which holds some information text, the title also acts as a link to return to the website landing page. Below this are two buttons, By City and By Location.
 ### City Selector page
 ![Form](documentation/responsive-city-display.png)
@@ -91,6 +91,7 @@ A custom error message will be displayed if there was an incorrect option select
 ### Custom 404 page
 ![404 Error](documentation/responsive-404-display.png)
 Custom 404 error page set with links to index page. The title and addional button both return the user back to main landing page.
+
 ---
 ## Testing
 
