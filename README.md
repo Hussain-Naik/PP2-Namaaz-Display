@@ -126,7 +126,7 @@ Each device tested the site using the following browsers:
 
 ### Solved Bugs
 
-- Fix API month parameter as getMonth() getMonth() returns value from 0-11
+- Fix API month parameter as getMonth() returns value from 0-11
     - +1 to month value for current month
 
 - Timer countdown insert 
