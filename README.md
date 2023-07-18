@@ -67,7 +67,13 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 
 ---
 ## Features
-
+![Home Page](documentation/home-lighthouse.png)
+![Home Page](documentation/home-lighthouse.png)
+![Home Page](documentation/home-lighthouse.png)
+![Home Page](documentation/home-lighthouse.png)
+![Home Page](documentation/home-lighthouse.png)
+![Home Page](documentation/home-lighthouse.png)
+![Home Page](documentation/home-lighthouse.png)
 
 ---
 ## Testing
@@ -165,7 +171,7 @@ Each device tested the site using the following browsers:
 ### Lighthouse Accessibility and Performance
 
 - Home Page using lighthouse in devtools I confirmed that the page is performing well, accessible and colors and fonts chosen are readable.
-![Home Page](documentation/home-lighthouse.png)
+![lighthouse](documentation/lighthouse-validation.png)
 
 ---
 ## Deployment
