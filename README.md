@@ -137,6 +137,8 @@ Each device tested the site using the following browsers:
 | Click Back after Submit Error | Display Form City Selector | Clicked Back | Country/City Selector form displayed | Pass |
 | Custom 404 page | Display custom 404 page | Enter random text in website url path | Custom 404 page displayed | Pass |
 | Click Back after 404 error | Display index page | Clicked Back | Home page displayed | Pass |
+| Spinning wheel for API delay | Prayer start time displays spinning wheel | clicked submit | Spinning wheel while API infomration was fetched | Pass |
+| Spinning wheel for API delay | Prayer start time displays spinning wheel | clicked By Location | Spinning wheel while API infomration was fetched | Pass |
 | Invert prayer display when exceeded time | Prayer time passed change style | Manually adjusted device time till end of prayer time | Prayer style inverted | Pass |
 | Add timer to current active prayer | Countdown timer indicatineg remaing time to perform prayer | Manually adjusted device time | Timer added for each prayer depending on start time | Pass |
 | Timer Animation | Circular progress bar around timer | Manually adjusted device time | Animated for 1% of time remaining | Pass |
@@ -223,7 +225,7 @@ The live link can be found [here](https://hussain-naik.github.io/PP2-Namaaz-Disp
 ---
 ## Credits
 
-- All images are taken from [unsplash](https://unsplash.com/), [pixabay](https://pixabay.com/) and [freepik](https://www.freepik.com/) website or created using [canva]().
+- The background for the website was created using [canva](https://www.canva.com/).
 - favicon was made using [faviconer.com](http://www.faviconer.com/).
 
 ---
