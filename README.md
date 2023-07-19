@@ -188,8 +188,8 @@ Each device tested the site using the following browsers:
 
 ### JavaScript Validator
 
-- No errors or warnings were found when passing through the official W3C (Jigsaw)
-![javascript](documentation/css-validator.png)
+[jshint](https://jshint.com/) was used to validate the JavaScript.
+- ![script.js](documentation/js-validation.png)
 
 ### Lighthouse Accessibility and Performance
 
