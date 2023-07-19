@@ -218,6 +218,7 @@ The live link can be found [here](https://hussain-naik.github.io/PP2-Namaaz-Disp
 - Add refresh to results at midnight to retrive new data.
 - Add reverse geolocation to display user city rather than coordinates.
 - Add addional information for islamic relevance dates.
+- Add feature for when prayer can not be performed.
 
 ---
 ## Credits
