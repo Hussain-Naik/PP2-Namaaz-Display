@@ -21,17 +21,19 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 ---
 ## Technologies Used
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/css)
-- [Font Awesome icons](https://fontawesome.com/)
-- [Google fonts](https://fonts.google.com/)
-- [VSCode](https://code.visualstudio.com/)
-- [Canva](https://www.canva.com/)
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Balsamiq Wireframes](https://balsamiq.com/)
-- [Postman](https://en.wikipedia.org/wiki/Postman_(software))
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - was used as the foundation of the site
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used to add the styles and layout of the site.
+- [Font Awesome icons](https://fontawesome.com/) - was used for icons and spinning wheel for fetch delay
+- [Google fonts](https://fonts.google.com/) - was used for the fonts on the website
+- [VSCode](https://code.visualstudio.com/) - was used as the main tool to write and edit code.
+- [Canva](https://www.canva.com/) - was used to create the background for the website
+- [Git](https://git-scm.com/) - was used for the version control of the website.
+- [GitHub](https://github.com/) - was used to host the code of the website.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - was used to add functionality to the website
+- [Balsamiq Wireframes](https://balsamiq.com/) - was used to make the wireframes
+- [Postman](https://en.wikipedia.org/wiki/Postman_(software)) - was used for testing API requests
+- [Geonames](https://www.geonames.org/export/web-services.html) - API used to populate country and city options
+- [Aladhan](https://aladhan.com/prayer-times-api) - API used to get and display prayer times
 
 ---
 ## Design
