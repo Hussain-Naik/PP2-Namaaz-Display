@@ -135,7 +135,13 @@ Each device tested the site using the following browsers:
 | Click Submit (Country Input invalid) | Error as Fetch request passed with invalid parameters | Clicked Submit with invalid country | Custom error displayed with button to go back | Pass |
 | Click Back after Submit | Display Form City Selector | Clicked Back | Country/City Selector form displayed | Pass |
 | Click Back after Submit Error | Display Form City Selector | Clicked Back | Country/City Selector form displayed | Pass |
-
+| Custom 404 page | Display custom 404 page | Enter random text in website url path | Custom 404 page displayed | Pass |
+| Click Back after 404 error | Display index page | Clicked Back | Home page displayed | Pass |
+| Invert prayer display when exceeded time | Prayer time passed change style | Manually adjusted device time till end of prayer time | Prayer style inverted | Pass |
+| Add timer to current active prayer | Countdown timer indicatineg remaing time to perform prayer | Manually adjusted device time | Timer added for each prayer depending on start time | Pass |
+| Timer Animation | Circular progress bar around timer | Manually adjusted device time | Animated for 1% of time remaining | Pass |
+| Timer to display 00:00 for when delay after prayer end and next prayer start time | Displays timer without updating time | Manually adjusted time on device | Timer after fajr end and zohar start displays zero timer | Pass |
+| Timer before true midnight | Timer should be displayed for Isha prayer | Manually adjusted device time | Isha end time is true midnight timer displayed for Isha prayer | Pass |
 
 
 ---
