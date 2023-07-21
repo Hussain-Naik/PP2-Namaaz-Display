@@ -7,15 +7,15 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 ## User stories
 
 ### First time visitor goals
-- As a first time visitor I want to know what time each islamic prayer is
-- As a first time visitor I want the site Responsive on my device
-- As a first time visitor I want the site to be easy to navigate
+- As a first time visitor I want to find what time prayers are so i can perform my salaah
+- As a first time visitor I want the site Responsive on my device so that i can benifit from prayer times in any situation
+- As a first time visitor I want the site to be easy to navigate so i do not waste much time
 
 ### Returning visitor goals
-- As a returning visitor I want to know how long remaining for current prayer
+- As a returning visitor I want to know how long remaining for current prayer so i can adjust my schedule
 
 ### Frequent visitor goals
-- As a Frequent visitor I want to know prayer times in different cities
+- As a Frequent visitor I want to know prayer times in different cities when am traveling
 - As a Frequent visitor I want to know next day prayer times to avoid missing my prayers
 
 ---
@@ -37,6 +37,8 @@ The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website
 
 ---
 ## Design
+
+The website was designed with app like feature rather than a traditional website with link navigation.
 
 ### Wireframe
 
