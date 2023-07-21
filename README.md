@@ -146,6 +146,8 @@ Each device tested the site using the following browsers:
 | Timer Animation | Circular progress bar around timer | Manually adjusted device time | Animated for 1% of time remaining | Pass |
 | Timer to display 00:00 for when delay after prayer end and next prayer start time | Displays timer without updating time | Manually adjusted time on device | Timer after fajr end and zohar start displays zero timer | Pass |
 | Timer before true midnight | Timer should be displayed for Isha prayer | Manually adjusted device time | Isha end time is true midnight timer displayed for Isha prayer | Pass |
+| Timer Title | Display Remaining time for Prayer | Manually adjusted device time | Default Title displayed when mouser hover over timer | Pass |
+| Timer Title before prayer start | Display Prayer not started | Manually adjusted device time | Set Title displayed when mouser hover over timer | Pass |
 
 
 ---
