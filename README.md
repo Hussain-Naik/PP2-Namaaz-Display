@@ -1,14 +1,14 @@
 # Namaaz Display
 ![Namaaz Display](documentation/responsive-display.png)
 
-The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website allows people to find namaaz times for a given city location or gps coordinates. The website also displays a timer for time remaing to perform current prayer.
+The [Namaaz Display](https://hussain-naik.github.io/PP2-Namaaz-Display/) website allows people to find Namaaz times for a given city location or gps coordinates. The website also displays a timer for time remaining to perform current prayer.
 
 ---
 ## User stories
 
 ### First time visitor goals
 - As a first time visitor I want to find what time prayers are so i can perform my salaah
-- As a first time visitor I want the site Responsive on my device so that i can benifit from prayer times in any situation
+- As a first time visitor I want the site Responsive on my device so that i can benefit from prayer times in any situation
 - As a first time visitor I want the site to be easy to navigate so i do not waste much time
 
 ### Returning visitor goals
@@ -67,7 +67,7 @@ The website was designed with app like feature rather than a traditional website
 
 - Google Fonts
     - [Oxygen](https://fonts.google.com/specimen/Oxygen?query=oxygen) - used for heading and logo
-    - [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto) - used for remaing body text
+    - [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto) - used for remaining body text
 
 ---
 ## Features
@@ -80,7 +80,7 @@ The home page of website displays the sites name as a title and then a container
 The City Selector display inform the user to select a country and city to view prayer times in the selected city. There are two new button, Back and Submit.
 ### Form Validation
 ![Form Validation](documentation/responsive-validator-display.png)
-As the page is Javascript DOM Manipulate the form action has been disabled and a manualy javascript validation propmting the user to select options from the given dropdown. The Country and City Drop down use the geonames API to populate the options.
+As the page is Javascript DOM Manipulate the form action has been disabled and a manual javascript validation prompting the user to select options from the given dropdown. The Country and City Drop down use the geonames API to populate the options.
 ### API Prayer Times
 ![Results](documentation/responsive-results-display.png)
 The Prayer times result page displays the current device time with georgian date and islamic date. Each prayer start time is displayed and the current active prayer also displays a timer with a circular progress bar. The active prayer changes once the prayer end time has been passed. The prayers that have passed invert the colors and add opacity to remove focus and display pray start time for next day.
@@ -94,7 +94,7 @@ A custom error message will be displayed if there was an incorrect option select
 
 ### Custom 404 page
 ![404 Error](documentation/responsive-404-display.png)
-Custom 404 error page set with links to index page. The title and addional button both return the user back to main landing page.
+Custom 404 error page set with links to index page. The title and additional button both return the user back to main landing page.
 
 ---
 ## Testing
@@ -103,7 +103,7 @@ Custom 404 error page set with links to index page. The title and addional butto
 
 Full testing was performed on the following devices:
 
-- Decktop:
+- Desktop:
   - Mac Mini 2014
 - Mobile Devices:
   * iPhone SE (3rd Gen).
@@ -133,20 +133,20 @@ Each device tested the site using the following browsers:
 | City List Dropdown | Users will see a drop-down list of the pre-defined options as they input data | Begin Typing in City input | List displayed Cities | Pass |
 | Assign City to input | Selecting City from data list will assign City to input field | Selected a City from list | Chosen City displayed in input field | Pass |
 | Click Submit (Inputs Selected) | Load Prayers times for given city | Clicked Submit | Correct location prayer data displayed | Pass |
-| Click Submit (City Input Empty) | Required Input prompt user to select a City | Clicked Submit with city input empty | City Label changed colour to red requesting user to select | Pass |
-| Click Submit (Country Input Empty) | Required Input prompt user to select a Country | Clicked Submit with country input empty | Country Label colour changed to red requesting user to select | Pass |
-| Click Submit (Both Inputs Empty) | Required Inputs prompt user to select a Country and City | Clicked Submit with inputs empty|  Label colour changed to red requesting user input | Pass |
+| Click Submit (City Input Empty) | Required Input prompt user to select a City | Clicked Submit with city input empty | City Label changed color to red requesting user to select | Pass |
+| Click Submit (Country Input Empty) | Required Input prompt user to select a Country | Clicked Submit with country input empty | Country Label color changed to red requesting user to select | Pass |
+| Click Submit (Both Inputs Empty) | Required Inputs prompt user to select a Country and City | Clicked Submit with inputs empty|  Label color changed to red requesting user input | Pass |
 | Click Submit (Country Input invalid) | Error as Fetch request passed with invalid parameters | Clicked Submit with invalid country | Custom error displayed with button to go back | Pass |
 | Click Back after Submit | Display Form City Selector | Clicked Back | Country/City Selector form displayed | Pass |
 | Click Back after Submit Error | Display Form City Selector | Clicked Back | Country/City Selector form displayed | Pass |
 | Custom 404 page | Display custom 404 page | Enter random text in website url path | Custom 404 page displayed | Pass |
 | Click Back after 404 error | Display index page | Clicked Back | Home page displayed | Pass |
-| Spinning wheel for API delay | Prayer start time displays spinning wheel | clicked submit | Spinning wheel while API infomration was fetched | Pass |
-| Spinning wheel for API delay | Prayer start time displays spinning wheel | clicked By Location | Spinning wheel while API infomration was fetched | Pass |
+| Spinning wheel for API delay | Prayer start time displays spinning wheel | clicked submit | Spinning wheel while API information was fetched | Pass |
+| Spinning wheel for API delay | Prayer start time displays spinning wheel | clicked By Location | Spinning wheel while API information was fetched | Pass |
 | Invert prayer display when exceeded time | Prayer time passed change style | Manually adjusted device time till end of prayer time | Prayer style inverted | Pass |
-| Add timer to current active prayer | Countdown timer indicatineg remaing time to perform prayer | Manually adjusted device time | Timer added for each prayer depending on start time | Pass |
+| Add timer to current active prayer | Countdown timer indicating remaining time to perform prayer | Manually adjusted device time | Timer added for each prayer depending on start time | Pass |
 | Timer Animation | Circular progress bar around timer | Manually adjusted device time | Animated for 1% of time remaining | Pass |
-| Timer to display 00:00 for when delay after prayer end and next prayer start time | Displays timer without updating time | Manually adjusted time on device | Timer after fajr end and zohar start displays zero timer | Pass |
+| Timer to display 00:00 for when delay after prayer end and next prayer start time | Displays timer without updating time | Manually adjusted time on device | Timer after Fajr end and Zohar start displays zero timer | Pass |
 | Timer before true midnight | Timer should be displayed for Isha prayer | Manually adjusted device time | Isha end time is true midnight timer displayed for Isha prayer | Pass |
 | Timer Title | Display Remaining time for Prayer | Manually adjusted device time | Default Title displayed when mouser hover over timer | Pass |
 | Timer Title before prayer start | Display Prayer not started | Manually adjusted device time | Set Title displayed when mouser hover over timer | Pass |
@@ -163,14 +163,14 @@ Each device tested the site using the following browsers:
 - Timer countdown was inserted for each prayer
     - Function to insert timer placed after if statement and removed first timer sibling
 
-- Timer percentage need to convert current time to seconds to compare and calculte percentage
-    - Calculate correct precentage from remaining time left
+- Timer percentage need to convert current time to seconds to compare and calculate percentage
+    - Calculate correct percentage from remaining time left
 
 - API fetch data for month unable to get next day when end of month
-    - Added two single date API reqeust for current and next day
+    - Added two single date API request for current and next day
 
-- API request failed due to GitHub sercurity
-    - Changed reqeust to https and add secure prefix for geonames.
+- When deployed on GitHub the website was broken due to the GitHUb security for API requests
+    - Changed request to https and add secure prefix for geonames.
     
 ### Unsolved Bugs
 
@@ -223,9 +223,9 @@ The live link can be found [here](https://hussain-naik.github.io/PP2-Namaaz-Disp
 
 - Add a digital clock font to time.
 - Add feature for hanafii school prayer times as they differ slightly.
-- Add refresh to results at midnight to retrive new data.
+- Add refresh to results at midnight to retrieve new data.
 - Add reverse geolocation to display user city rather than coordinates.
-- Add addional information for islamic relevance dates.
+- Add additional information for islamic relevance dates.
 - Add feature for when prayer can not be performed.
 
 ---
@@ -237,12 +237,12 @@ The live link can be found [here](https://hussain-naik.github.io/PP2-Namaaz-Disp
 ---
 ## Acknowledgments
 
-- Due to the nature of the project the first form of acknowledegement is to Allah with the common islamic phrase Alhamdulillah (roughly equivalent to "thank God". Literally it means "all praise is to God")
+- Due to the nature of the project the first form of acknowledgement is to Allah with the common islamic phrase Alhamdulillah (roughly equivalent to "thank God". Literally it means "all praise is to God")
 - [Aleksei Konovalov](https://github.com/lexach91) great guidance and mentor throughout project
 - [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
 - [Kevin Powell](https://www.youtube.com/user/KepowOb) Flex display tutorials.
 - [Coding Artist](https://www.youtube.com/@CodingArtist) CSS hover animation tutorial.
-- [David Fekke](https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/) Documentation on Dom chnages without a javascript framework.
+- [David Fekke](https://fek.io/blog/how-to-observe-changes-to-the-dom-without-using-a-java-script-framework/) Documentation on Dom changes without a javascript framework.
 - [Muhammad Irshad - Online Tutorials](https://www.youtube.com/@OnlineTutorialsYT) tutorial on how to make animated circular timer.
 
 ---
