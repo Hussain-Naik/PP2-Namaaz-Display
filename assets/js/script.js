@@ -496,6 +496,10 @@ function convertToTime(seconds) {
     return h + ':' + m + ':' + s;
 }
 
+/**
+ * Function to chnage and diplsay error screen when error
+ * @param {*} type parameter to 'NGL' for no GeoLocation or empty for default
+ */
 function errorPage(type) {
     if (type == 'NGL'){
         noGeoLocation();
@@ -504,6 +508,9 @@ function errorPage(type) {
     }
 }
 
+/**
+ * Function to display no GeoLocation error message
+ */
 function noGeoLocation() {
     let insert = `
     <h2>Error</h2>
@@ -520,6 +527,10 @@ function noGeoLocation() {
 
     html.setAttribute('data-type', '1');
 }
+/**
+ * Function to custom validate form input
+ * @param {*} input parameter of passed form input fields
+ */
 function formValidation(input) {
     for (let i = 0 ; i < input.length ; i++) {
         if(input[i].value === ''){
@@ -529,6 +540,9 @@ function formValidation(input) {
     }
 
 }
+/**
+ * Function to return default error message
+ */
 function defaultError() {
     let insert = `
     <h2>Its not You - Unexpected Error</h2>
