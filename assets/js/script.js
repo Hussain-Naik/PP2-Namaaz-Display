@@ -392,7 +392,7 @@ function insertTimer(){
 function timerHTML(index, element) {
     if (element[index].children.length < 4 ) {
         element[index].innerHTML += `
-        <div class="timer" title="A countdown timer to pray current prayer">
+        <div class="timer" title="Time Remaining to pray current Namaaz">
             <div class ="percent" style="--num:100;">
                 <svg>
                     <circle cx="40" cy="40" r="38"></circle>
@@ -490,10 +490,25 @@ function convertToTime(seconds) {
     m = checkTime(m);
     h = checkTime(h);
     s = checkTime(s);
-    if (seconds < 0) {
+    if (seconds <= 0) {
+        changeTitle(true);
         return  '00:00:00';
     }
     return h + ':' + m + ':' + s;
+}
+
+/**
+ * Function to chnage timer title
+ * @param {*} bool pass parameter true to change title
+ */
+function changeTitle(bool) {
+    let timer = document.getElementsByClassName('timer')[0];
+    if (bool) {
+        timer.setAttribute('title','Prayer not Started!');
+    } else {
+        timer.setAttribute('title','Time Remaining to pray current Namaaz');
+    }
+    
 }
 
 /**
