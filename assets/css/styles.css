@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@300&display=swap');
 
+/* assign variable for colours and  */
 :root {
     --color1: #20232f;
     --textBGColor: #20232fdf;
     --color2: #F3FCF0;
     --color3: #C3B367;
-    --num1: 239;
+    --num1: 239; /* dash array to display 1 degree of circular circumference */
 }
 
 * {
@@ -15,6 +16,7 @@
     text-decoration: none;
 }
 
+/* body style with background image to full screen centered */
 body {
     font-family: Roboto, sans-serif;
     font-weight: 300;
@@ -29,6 +31,7 @@ body {
     background-position-y: top;
 }
 
+/* default heading styles and font */
 h1, h2, h3 {
     font-family: Oxygen, sans-serif;
     text-transform: uppercase;
@@ -39,6 +42,7 @@ h1, h2, h3 {
     background-color: var(--textBGColor);
 }
 
+/* increased font size for different headings */
 h1 {
     font-size: 2rem;
     background-color: transparent;
@@ -64,6 +68,7 @@ h3 {
     margin-top: 0.75rem;
 }
 
+/* Styling for buttons */
 .btn-box {
     width: 25%;
     min-width: 200px;
@@ -84,6 +89,7 @@ h3 {
     margin: .3rem;
 }
 
+/* button underline hover effect */
 .btn span::after {
     content: "";
     position: absolute;
@@ -99,10 +105,12 @@ h3 {
     width: 100%;
 }
 
+/* style class to center align content */
 .center {
     text-align: center;
 }
 
+/* Styling for the API prayer times results */
 .prayer {
     display: flex;
     margin: 1rem auto;
@@ -163,21 +171,25 @@ h3 {
     
 }
 
+/* style class for active elements to be visible */
 .active {
     visibility: visible ;
     opacity: 1;
 }
 
+/* style class for hidden elements to be hidden */
 .hidden {
     visibility: hidden ;
     display: none;
 }
 
+/* Style to change cursor for button hover */
 .button:hover {
     cursor: pointer;
     background-color: var(--textBGColor);
 }
 
+/* Form display styling */
 .frm-display {
     display: flex;
     flex-direction: column;
@@ -220,6 +232,7 @@ h3 {
     outline: var(--color3) auto 1px;
 }
 
+/* Prayer timer remaining styles */
 .timer {
     width: 5rem;
     height: 5rem;
@@ -263,6 +276,7 @@ h3 {
     color: var(--color2);
 }
 
+/* Error page styling */
 .error {
     max-width: 300px;
     background-color: var(--textBGColor);
