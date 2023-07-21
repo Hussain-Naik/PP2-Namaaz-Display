@@ -480,7 +480,7 @@ function convertToSeconds(arg) {
 /**
  * Function to convert seconds to hours and minutes
  * @param {*} seconds paramter 
- * @returns return string as HH:MM
+ * @returns return string as HH:MM:SS
  */
 function convertToTime(seconds) {
     let h = Math.floor(seconds / 3600);
@@ -541,7 +541,7 @@ function formValidation(input) {
 
 }
 /**
- * Function to return default error message
+ * Function to return default error messsage
  */
 function defaultError() {
     let insert = `
